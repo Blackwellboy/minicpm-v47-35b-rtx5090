@@ -1,57 +1,33 @@
-A 15.5 GB quant just tied the 21 GB one.
+ok so the Q3 of the new MiniCPM-V 4.7 basically matches the Q4
 
-MiniCPM-V 4.7 (OpenBMB's new 35B-A3B vision model) on ONE RTX 5090. Official Q3 mix vs Q4_K_M, 8 vision benchmarks x 250 questions each.
+on my 5090 it's 15.5 GB vs 21.2 GB. ran both through 8 vision benches, 250 questions each. Q3 won 4, Q4 won 3, one dead tie, and nothing was more than 2 points apart
 
-Q3 wins 4, Q4 wins 3, 1 tie. Every gap under 2 points.
-
-Initial testing 🧵
+first pass, more coming 👇
 ---
-BF16 is 70.6 GB, so on a 32 GB card it's quant or nothing:
+for context, it's OpenBMB's new 35B-A3B vision model. BF16 is 70 GB so a 32 GB card needs a quant
 
-- AWQ on vLLM: 22 GB
-- Q4_K_M on llama.cpp: 21.2 GB
-- Q3 mix on llama.cpp: 15.5 GB (Q4_K_M with only the routed experts at Q3_K)
-
-All three keep full vision and found 12/12 hidden passkeys out to 58K tokens.
+I ran three: their AWQ on vLLM (22 GB), plus the Q4_K_M and Q3 mix GGUFs on llama.cpp. all three kept vision working and found all 12 passkeys I hid out to 58K tokens
 ---
-Speed on one 5090:
+speed is where they split
 
-Single stream: ~185-196 tok/s on every version.
-
-Under load it's not close. AWQ on vLLM hit 2,883 tok/s aggregate at 32 concurrent requests. llama.cpp topped out around 455.
-
-Prefill on vLLM: ~13K tok/s at 58K context.
+one stream does ~185-196 tok/s whichever you pick. throw 32 requests at it though and vLLM + AWQ pushes 2,883 tok/s total, llama.cpp tops out around 455. prefill on vLLM was ~13K tok/s at 58K context
 ---
-Our pick so far:
+so if I'm serving it to more than just me it's AWQ on vLLM. it also had the best vision average (83.0 with the card's 4x setting)
 
-Best overall: AWQ on vLLM. Top vision average (83.0 at the card's 4x vision settings) and 6x the throughput.
-
-Best value: the Q3 mix. 5 GB smaller, same scores, perplexity only +3%.
-
-Q4_K_M didn't earn its extra 5.7 GB in our runs.
+if I just want it running on less VRAM, Q3. perplexity is about 3% worse than Q4 (6.04 vs 5.86) and that's the only place I saw it lose
 ---
-Card check: OCRBench reproduces (91.6 vs 91.2 claimed).
+vs the model card: OCRBench matched, 91.6 for me vs their 91.2
 
-MMStar, MMMU and MathVista came in 7-13 pts under the card on our rule-scored subsets. Part of that is the model writing long answers even with thinking off. A harness note, not a debunk.
+MMStar, MMMU and MathVista came in 7-13 points lower. some of that is my simpler scoring, some is that it loves to explain itself even with thinking off and a bunch of answers ran past my 1024 token cap
 ---
-Trap we hit: thinking is ON by default, and on short questions the model answers before ever closing its think block. vLLM files the answer as "reasoning" and the reply comes back empty.
+thing that bit me: thinking is on by default, and on short multiple choice it'll just answer without ever closing the think tag. vLLM files the answer as reasoning and you get an empty reply back. happened 24 out of 40 times
 
-24 of 40 multiple-choice items. Turn thinking off for direct answers.
+turn thinking off for direct questions
 ---
-Second trap: the official AWQ repo doesn't load as shipped. Its configs point at code files that aren't in the repo.
+also their AWQ repo won't load as shipped. the configs point at python files that aren't in the repo
 
-Copy 3 config files from the base model repo over it and it runs. Both traps are written up with fixes.
+copy 3 config files over from the base model repo and it runs fine. wrote both of these up with the fixes
 ---
-This is just initial testing. Coming next:
+still on the list: their DSpark draft model for spec decoding, 128K-256K context, video (Video-MME, LongVideoBench), Q5/Q6 and the 4x vision projector on GGUF, a proper head to head with Qwen3.6-35B-A3B, and tool calling
 
-- DSpark speculative decoding (OpenBMB's 0.4B draft)
-- 128K to 256K context
-- Video: Video-MME, LongVideoBench
-- Thinking-mode deep dive
-- Q5/Q6 + the 4x vision projector on GGUF
-- Head-to-head vs Qwen3.6-35B-A3B
-- Tool calling / agents
----
-Recipes, harness and every raw result row: [repo link]
-
-One RTX 5090, vLLM nightly + llama.cpp master, n=250 per benchmark, temp 0. Nothing cherry-picked: a failed run is documented, not hidden.
+scripts and every raw result: [repo link]
