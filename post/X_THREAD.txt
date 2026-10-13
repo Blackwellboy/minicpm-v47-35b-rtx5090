@@ -1,0 +1,57 @@
+A 15.5 GB quant just tied the 21 GB one.
+
+MiniCPM-V 4.7 (OpenBMB's new 35B-A3B vision model) on ONE RTX 5090. Official Q3 mix vs Q4_K_M, 8 vision benchmarks x 250 questions each.
+
+Q3 wins 4, Q4 wins 3, 1 tie. Every gap under 2 points.
+
+Initial testing 🧵
+---
+BF16 is 70.6 GB, so on a 32 GB card it's quant or nothing:
+
+- AWQ on vLLM: 22 GB
+- Q4_K_M on llama.cpp: 21.2 GB
+- Q3 mix on llama.cpp: 15.5 GB (Q4_K_M with only the routed experts at Q3_K)
+
+All three keep full vision and found 12/12 hidden passkeys out to 58K tokens.
+---
+Speed on one 5090:
+
+Single stream: ~185-196 tok/s on every version.
+
+Under load it's not close. AWQ on vLLM hit 2,883 tok/s aggregate at 32 concurrent requests. llama.cpp topped out around 455.
+
+Prefill on vLLM: ~13K tok/s at 58K context.
+---
+Our pick so far:
+
+Best overall: AWQ on vLLM. Top vision average (83.0 at the card's 4x vision settings) and 6x the throughput.
+
+Best value: the Q3 mix. 5 GB smaller, same scores, perplexity only +3%.
+
+Q4_K_M didn't earn its extra 5.7 GB in our runs.
+---
+Card check: OCRBench reproduces (91.6 vs 91.2 claimed).
+
+MMStar, MMMU and MathVista came in 7-13 pts under the card on our rule-scored subsets. Part of that is the model writing long answers even with thinking off. A harness note, not a debunk.
+---
+Trap we hit: thinking is ON by default, and on short questions the model answers before ever closing its think block. vLLM files the answer as "reasoning" and the reply comes back empty.
+
+24 of 40 multiple-choice items. Turn thinking off for direct answers.
+---
+Second trap: the official AWQ repo doesn't load as shipped. Its configs point at code files that aren't in the repo.
+
+Copy 3 config files from the base model repo over it and it runs. Both traps are written up with fixes.
+---
+This is just initial testing. Coming next:
+
+- DSpark speculative decoding (OpenBMB's 0.4B draft)
+- 128K to 256K context
+- Video: Video-MME, LongVideoBench
+- Thinking-mode deep dive
+- Q5/Q6 + the 4x vision projector on GGUF
+- Head-to-head vs Qwen3.6-35B-A3B
+- Tool calling / agents
+---
+Recipes, harness and every raw result row: [repo link]
+
+One RTX 5090, vLLM nightly + llama.cpp master, n=250 per benchmark, temp 0. Nothing cherry-picked: a failed run is documented, not hidden.
