@@ -1,131 +1,132 @@
 <!doctype html>
 <html><head><meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root { --bg:#07080d; --ink:#f4f6fb; --dim:#8a93a8; --q4:#7c5cff; --q3:#22e0b4; --awq:#ffb020; --line:#1c2030; }
+  :root { --bg:#0b0d14; --panel:#11141e; --line:#1f2433; --ink:#f3f5fa; --ink2:#b9c0d0; --ink3:#727b90;
+          --q4:#8a74ff; --q3:#119c7d; --amber:#f5b041; }
   * { box-sizing:border-box; margin:0; padding:0; }
-  html,body { width:1600px; height:900px; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,sans-serif; overflow:hidden; }
-  .bg { position:absolute; inset:0;
-    background:
-      radial-gradient(900px 600px at 12% 108%, rgba(34,224,180,.22), transparent 60%),
-      radial-gradient(800px 600px at 92% -10%, rgba(124,92,255,.28), transparent 60%),
-      linear-gradient(180deg,#07080d,#0b0d16); }
-  .grid { position:absolute; inset:0; opacity:.35;
-    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:40px 40px; mask-image:radial-gradient(1200px 700px at 50% 40%,#000 30%,transparent 80%); }
-  .wrap { position:absolute; inset:0; padding:56px 64px; }
-  .kicker { font-family:'JetBrains Mono',monospace; font-size:18px; letter-spacing:.18em; color:var(--q3); text-transform:uppercase; display:flex; gap:14px; align-items:center; }
-  .kicker .dot { width:10px; height:10px; border-radius:50%; background:var(--q3); box-shadow:0 0 16px var(--q3); }
-  h1 { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:76px; line-height:1.0; letter-spacing:-.02em; margin-top:22px; width:820px; }
-  h1 .q3 { color:var(--q3); } h1 .q4 { color:var(--q4); }
-  .sub { margin-top:20px; font-size:22px; color:#c3cad9; width:780px; line-height:1.4; }
-  .sub b { color:var(--ink); }
-  .gpu { position:absolute; left:52px; top:470px; }
-  .chips { position:absolute; left:64px; top:705px; display:flex; gap:14px; }
-  .chip { border:1px solid #262b3d; background:rgba(15,18,30,.85); border-radius:14px; padding:12px 18px; min-width:230px; }
-  .chip .t { font-family:'JetBrains Mono',monospace; font-size:14px; letter-spacing:.12em; color:var(--dim); text-transform:uppercase; }
-  .chip .v { font-family:'Space Grotesk',sans-serif; font-size:34px; font-weight:700; margin-top:4px; }
-  .chip .s { font-size:15px; color:var(--dim); margin-top:2px; }
-  .panel { position:absolute; right:56px; top:56px; width:640px; height:620px; border:1px solid #23283a; border-radius:22px;
-    background:linear-gradient(180deg,rgba(18,21,34,.92),rgba(11,13,22,.92)); padding:28px 30px; }
-  .ph { display:flex; justify-content:space-between; align-items:baseline; }
-  .ph .t { font-family:'Space Grotesk',sans-serif; font-size:26px; font-weight:700; }
-  .legend { display:flex; gap:18px; font-size:15px; color:#c3cad9; font-weight:600; }
-  .legend i { display:inline-block; width:14px; height:14px; border-radius:4px; margin-right:7px; vertical-align:-2px; }
-  .rows { margin-top:20px; }
-  .row { display:grid; grid-template-columns:205px 1fr; align-items:center; margin-bottom:16px; }
-  .row .n { font-size:17px; font-weight:600; color:#d7dceb; }
-  .bars { position:relative; }
-  .bar { height:15px; border-radius:6px; position:relative; margin:3px 0; }
-  .bar span { position:absolute; right:-52px; top:-4px; font-family:'JetBrains Mono',monospace; font-size:15px; font-weight:700; }
-  .b4 { background:linear-gradient(90deg,#3d2c99,var(--q4)); } .b4 span { color:var(--q4); }
-  .b3 { background:linear-gradient(90deg,#0f6e59,var(--q3)); } .b3 span { color:var(--q3); }
-  .win { font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--bg); background:var(--q3); padding:1px 6px; border-radius:5px; margin-left:8px; vertical-align:1px; }
-  .axis { font-family:'JetBrains Mono',monospace; font-size:12px; color:#5d6579; display:flex; justify-content:space-between; margin-left:205px; margin-right:15px; width:330px; border-top:1px solid #23283a; padding-top:6px; }
-  .verdict { margin-top:14px; font-size:17px; color:#c3cad9; }
-  .verdict b { color:var(--q3); }
-  .stats { position:absolute; right:56px; top:700px; width:640px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; }
-  .stat { border:1px solid #2a2f43; border-radius:16px; padding:14px 16px; background:rgba(15,18,30,.85); }
-  .stat .v { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; }
-  .stat .s { font-size:14px; color:var(--dim); margin-top:2px; line-height:1.3; }
-  .stat.awq .v { color:var(--awq); }
-  .foot { position:absolute; left:64px; bottom:26px; right:56px; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:13px; color:#5d6579; }
+  html,body { width:1600px; height:900px; overflow:hidden; background:var(--bg); color:var(--ink); font-family:Inter,sans-serif; }
+  .glow { position:absolute; left:-200px; top:-260px; width:1100px; height:760px;
+          background:radial-gradient(closest-side, rgba(138,116,255,.20), rgba(17,156,125,.08) 55%, transparent 75%); }
+  .glow2 { position:absolute; right:-260px; bottom:-320px; width:900px; height:700px;
+          background:radial-gradient(closest-side, rgba(17,156,125,.16), transparent 70%); }
+
+  .left { position:absolute; left:64px; top:52px; width:760px; }
+  .tags { display:flex; gap:10px; align-items:center; }
+  .new { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; letter-spacing:.14em;
+         color:#0b0d14; background:var(--ink); padding:6px 12px; border-radius:6px; }
+  .meta { font-family:'JetBrains Mono',monospace; font-size:15px; letter-spacing:.06em; color:var(--ink2); }
+  .brand { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:112px; line-height:.95; white-space:nowrap; letter-spacing:-.035em; margin-top:22px;
+           background:linear-gradient(100deg,#ffffff 0%,#ffffff 52%,#c9bfff 78%,#7fe3c9 100%); -webkit-background-clip:text; color:transparent; }
+  .spec { margin-top:14px; font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:26px; color:var(--ink2); }
+  .spec b { color:var(--ink); font-weight:600; }
+  .head { margin-top:28px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:44px; line-height:1.1; letter-spacing:-.015em; }
+  .head .q3 { color:#3fd9b3; } .head .q4 { color:#a797ff; }
+
+  .sees { position:absolute; left:64px; top:470px; width:760px; height:270px; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:18px 20px; display:flex; gap:18px; }
+  .sees .lab { position:absolute; top:-11px; left:18px; background:var(--bg); padding:0 8px; font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.14em; color:var(--ink3); }
+  .ex { flex:1; display:flex; gap:14px; align-items:center; }
+  .thumb { width:186px; height:186px; border-radius:10px; background:#fff; flex:none; overflow:hidden; }
+  .qa { font-size:16px; min-width:150px; line-height:1.35; }
+  .qa .q { color:var(--ink3); }
+  .qa .a { margin-top:8px; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:16px; white-space:nowrap; color:var(--ink); }
+  .qa .ok { display:inline-block; margin-top:8px; font-size:13px; font-weight:600; color:#3fd9b3; }
+
+  .panel { position:absolute; right:56px; top:52px; width:660px; height:688px; background:var(--panel); border:1px solid var(--line); border-radius:22px; padding:26px 30px 22px; }
+  .ptitle { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:28px; }
+  .psub { font-size:15px; color:var(--ink3); margin-top:4px; }
+  .legend { display:flex; gap:22px; margin-top:16px; font-size:15px; font-weight:600; color:var(--ink2); }
+  .legend span { display:flex; align-items:center; gap:8px; }
+  .legend i { width:12px; height:12px; border-radius:50%; display:inline-block; }
+  svg text { font-family:Inter,sans-serif; }
+  .verdict { position:absolute; left:30px; right:30px; bottom:20px; display:flex; justify-content:space-between; align-items:baseline;
+             border-top:1px solid var(--line); padding-top:16px; }
+  .verdict .big { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:24px; }
+  .verdict .small { font-size:15px; color:var(--ink2); }
+  .verdict .small b { color:var(--ink); }
+
+  .stats { position:absolute; left:64px; right:56px; top:768px; display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .stat { display:flex; align-items:baseline; gap:12px; border-left:2px solid var(--line); padding:2px 0 2px 16px; }
+  .stat .v { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:36px; white-space:nowrap; }
+  .stat .s { font-size:14px; color:var(--ink2); line-height:1.3; }
+  .foot { position:absolute; left:64px; right:56px; bottom:22px; display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:var(--ink3); }
+  .foot .more { color:var(--ink2); }
 </style></head>
 <body>
-<div class="bg"></div><div class="grid"></div>
-<div class="wrap">
-  <div class="kicker"><span class="dot"></span>Initial testing · MiniCPM-V 4.7 · one RTX 5090</div>
-  <h1>The <span class="q3">15.5 GB</span> quant just tied the <span class="q4">21 GB</span> one.</h1>
-  <p class="sub">OpenBMB's new <b>35B-A3B vision model</b>, official <b>Q3 mix</b> vs <b>Q4_K_M</b>, 8 vision benchmarks, 250 questions each. Same card, same harness, same day.</p>
+<div class="glow"></div><div class="glow2"></div>
+
+<div class="left">
+  <div class="tags"><span class="new">NEW MODEL</span><span class="meta">OpenBMB · vision + text · initial testing</span></div>
+  <div class="brand">MiniCPM-V 4.7</div>
+  <div class="spec"><b>35B total · 3B active</b> MoE · tested on one RTX 5090</div>
+  <div class="head">The <span class="q3">15.5 GB</span> Q3 just tied<br>the <span class="q4">21.2 GB</span> Q4.</div>
 </div>
 
-<!-- original GPU illustration -->
-<svg class="gpu" width="660" height="230" viewBox="0 0 660 230" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="shell" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2a2f43"/><stop offset="1" stop-color="#11131d"/></linearGradient>
-    <radialGradient id="fan" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1b1f2e"/><stop offset="1" stop-color="#0a0c13"/></radialGradient>
-    <linearGradient id="glow" x1="0" x2="1"><stop offset="0" stop-color="#22e0b4"/><stop offset="1" stop-color="#7c5cff"/></linearGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="8"/></filter>
-  </defs>
-  <rect x="20" y="40" width="560" height="150" rx="22" fill="url(#glow)" opacity=".35" filter="url(#blur)"/>
-  <rect x="20" y="30" width="560" height="150" rx="20" fill="url(#shell)" stroke="#3a4060"/>
-  <rect x="20" y="30" width="560" height="6" rx="3" fill="url(#glow)"/>
-  <g transform="translate(150,105)">
-    <circle r="62" fill="url(#fan)" stroke="#3a4060" stroke-width="2"/>
-    <g fill="#2b3150"><path d="M0 -8 C30 -60 48 -30 50 -6 Z"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(51)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(103)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(154)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(206)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(257)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(309)"/></g>
-    <circle r="14" fill="#0d0f18" stroke="#22e0b4" stroke-width="2"/>
-  </g>
-  <g transform="translate(410,105)">
-    <circle r="62" fill="url(#fan)" stroke="#3a4060" stroke-width="2"/>
-    <g fill="#2b3150"><path d="M0 -8 C30 -60 48 -30 50 -6 Z"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(51)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(103)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(154)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(206)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(257)"/><path d="M0 -8 C30 -60 48 -30 50 -6 Z" transform="rotate(309)"/></g>
-    <circle r="14" fill="#0d0f18" stroke="#7c5cff" stroke-width="2"/>
-  </g>
-  <text x="280" y="112" text-anchor="middle" font-family="JetBrains Mono" font-size="15" font-weight="700" fill="#8a93a8" letter-spacing="3">RTX 5090</text>
-  <text x="280" y="134" text-anchor="middle" font-family="Space Grotesk" font-size="22" font-weight="700" fill="#f4f6fb">32 GB</text>
-  <rect x="60" y="180" width="300" height="14" rx="3" fill="#c9a227" opacity=".85"/>
-  <g fill="#8c7317"><rect x="70" y="180" width="2" height="14"/><rect x="90" y="180" width="2" height="14"/><rect x="110" y="180" width="2" height="14"/><rect x="130" y="180" width="2" height="14"/><rect x="150" y="180" width="2" height="14"/><rect x="170" y="180" width="2" height="14"/><rect x="190" y="180" width="2" height="14"/><rect x="210" y="180" width="2" height="14"/><rect x="230" y="180" width="2" height="14"/><rect x="250" y="180" width="2" height="14"/><rect x="270" y="180" width="2" height="14"/><rect x="290" y="180" width="2" height="14"/><rect x="310" y="180" width="2" height="14"/><rect x="330" y="180" width="2" height="14"/></g>
-  <!-- VRAM fill meter -->
-  <g transform="translate(600,32)">
-    <text x="0" y="0" font-family="JetBrains Mono" font-size="12" fill="#5d6579">VRAM</text>
-    <rect x="0" y="10" width="22" height="150" rx="6" fill="#11131d" stroke="#2a2f43"/>
-    <rect x="3" y="66" width="16" height="91" rx="4" fill="#22e0b4" opacity=".9"/>
-    <rect x="26" y="10" width="22" height="150" rx="6" fill="#11131d" stroke="#2a2f43" transform="translate(4,0)"/>
-    <rect x="33" y="41" width="16" height="116" rx="4" fill="#7c5cff" opacity=".9"/>
-    <text x="11" y="178" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#22e0b4">Q3</text>
-    <text x="41" y="178" text-anchor="middle" font-family="JetBrains Mono" font-size="12" fill="#7c5cff">Q4</text>
-  </g>
-</svg>
-
-<div class="chips">
-  <div class="chip"><div class="t">Q3 mix · 15.5 GB</div><div class="v" style="color:var(--q3)">81.6</div><div class="s">vision avg · 20.0 GB loaded</div></div>
-  <div class="chip"><div class="t">Q4_K_M · 21.2 GB</div><div class="v" style="color:var(--q4)">81.4</div><div class="s">vision avg · 25.4 GB loaded</div></div>
+<div class="sees">
+  <div class="lab">WHAT IT SEES · real test prompts, real answers</div>
+  <div class="ex">
+    <svg class="thumb" viewBox="0 0 640 400">
+      <rect width="640" height="400" fill="#fff"/>
+      <g fill="#5a5ac8">
+        <rect x="80" y="250" width="80" height="90"/><rect x="210" y="70" width="80" height="270"/>
+        <rect x="340" y="190" width="80" height="150"/><rect x="470" y="280" width="80" height="60"/></g>
+      <g font-family="Inter" font-size="30" font-weight="700" fill="#111" text-anchor="middle">
+        <text x="120" y="380">Mon</text><text x="250" y="380">Tue</text><text x="380" y="380">Wed</text><text x="510" y="380">Thu</text></g>
+    </svg>
+    <div class="qa"><div class="q">"Which day has the tallest bar?"</div><div class="a">Tue</div><div class="ok">✓ correct</div></div>
+  </div>
+  <div class="ex">
+    <svg class="thumb" viewBox="0 0 640 400">
+      <rect width="640" height="400" fill="#fff"/>
+      <rect x="40" y="60" width="560" height="280" fill="#fafafa" stroke="#ddd" stroke-width="3"/>
+      <text x="320" y="150" text-anchor="middle" font-family="Inter" font-size="34" font-weight="700" fill="#888" letter-spacing="6">INVOICE</text>
+      <text x="320" y="245" text-anchor="middle" font-family="JetBrains Mono" font-size="64" font-weight="700" fill="#111">48217-QX</text>
+    </svg>
+    <div class="qa"><div class="q">"What exact code is written?"</div><div class="a">INVOICE 48217-QX</div><div class="ok">✓ exact match</div></div>
+  </div>
 </div>
 
 <div class="panel">
-  <div class="ph"><div class="t">Q4_K_M vs Q3 mix</div>
-    <div class="legend"><span><i style="background:var(--q4)"></i>Q4_K_M</span><span><i style="background:var(--q3)"></i>Q3 mix</span></div></div>
-  <div class="rows" id="rows"></div>
-  <div class="axis"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div>
-  <div class="verdict">Q3 wins <b>4</b>, Q4 wins <b>3</b>, <b>1</b> tie. Every gap within 2 points.</div>
+  <div class="ptitle">Q4_K_M vs Q3 mix</div>
+  <div class="psub">8 vision benchmarks · 250 questions each · same GPU, same harness</div>
+  <div class="legend"><span><i style="background:var(--q4)"></i>Q4_K_M · 21.2 GB</span><span><i style="background:var(--q3)"></i>Q3 mix · 15.5 GB</span></div>
+  <svg id="chart" width="600" height="470" style="margin-top:10px"></svg>
+  <div class="verdict">
+    <div class="big">Q3 wins 4 · Q4 wins 3 · 1 tie</div>
+    <div class="small">avg <b>81.6</b> vs <b>81.4</b> · every gap ≤ 2 pts</div>
+  </div>
 </div>
 
 <div class="stats">
-  <div class="stat awq"><div class="v">2,883</div><div class="s">tok/s aggregate, AWQ on vLLM at 32 concurrent</div></div>
-  <div class="stat"><div class="v">~196</div><div class="s">tok/s single stream, both GGUFs</div></div>
-  <div class="stat"><div class="v">12/12</div><div class="s">passkeys found up to 58K tokens, every arm</div></div>
+  <div class="stat"><div class="v" style="color:var(--amber)">2,883</div><div class="s">tok/s aggregate<br>AWQ on vLLM, 32 users</div></div>
+  <div class="stat"><div class="v">~196</div><div class="s">tok/s single stream<br>both GGUFs</div></div>
+  <div class="stat"><div class="v">12/12</div><div class="s">hidden passkeys found<br>out to 58K tokens</div></div>
+  <div class="stat"><div class="v">+3%</div><div class="s">perplexity, Q3 vs Q4<br>6.04 vs 5.86</div></div>
 </div>
-
-<div class="foot"><span>thinking off · temp 0 · n=250 per bench · rule-based scoring · *HallusionBench = per-question accuracy</span><span>Blackwellboy · 2026-10-13</span></div>
+<div class="foot"><span>thinking off · temp 0 · rule-based scoring · *HallusionBench = per-question accuracy, not the card's metric</span><span class="more">initial testing · more coming</span></div>
 
 <script>
-  const d = [["DocVQA",96.6,96.7],["OCRBench",94.0,93.6],["AI2D",90.8,91.6],["HallusionBench*",85.2,84.4],["MathVista",76.8,78.8],["ChartQA",73.6,73.2],["MMStar",70.8,70.8],["MMMU",63.2,64.0]];
-  const rows = document.getElementById("rows"), W = 330;
-  for (const [n,a,b] of d) {
-    const tag = b > a ? '<span class="win">Q3</span>' : (a > b ? '<span class="win" style="background:var(--q4);color:#fff">Q4</span>' : '<span class="win" style="background:#3a4060;color:#fff">TIE</span>');
-    rows.insertAdjacentHTML("beforeend",
-      `<div class="row"><div class="n">${n}${tag}</div><div class="bars">
-        <div class="bar b4" style="width:${a/100*W}px"><span>${a.toFixed(1)}</span></div>
-        <div class="bar b3" style="width:${b/100*W}px"><span>${b.toFixed(1)}</span></div></div></div>`);
+  const d = [["DocVQA",96.6,96.7],["OCRBench",94.0,93.6],["AI2D",90.8,91.6],["HallusionBench*",85.2,84.4],
+             ["MathVista",76.8,78.8],["ChartQA",73.6,73.2],["MMStar",70.8,70.8],["MMMU",63.2,64.0]];
+  const svg = document.getElementById("chart"), NS = "http://www.w3.org/2000/svg";
+  const L = 160, R = 480, lo = 60, hi = 100, T0 = 30, rowH = 52;
+  const x = v => L + (v - lo) / (hi - lo) * (R - L);
+  const el = (t, a, txt) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; svg.appendChild(e); return e; };
+  for (const g of [60, 70, 80, 90, 100]) {
+    el("line", {x1:x(g), x2:x(g), y1:T0-12, y2:T0 + rowH*d.length - 18, stroke:"#1f2433", "stroke-width":1});
+    el("text", {x:x(g), y:T0 + rowH*d.length + 2, fill:"#727b90", "font-size":13, "text-anchor":"middle", "font-family":"JetBrains Mono"}, g);
   }
+  d.forEach(([n, a, b], i) => {
+    const y = T0 + i * rowH;
+    el("text", {x:0, y:y + 5, fill:"#e6e9f2", "font-size":17, "font-weight":600}, n);
+    el("line", {x1:x(Math.min(a,b)), x2:x(Math.max(a,b)), y1:y, y2:y, stroke:"#3a4157", "stroke-width":4, "stroke-linecap":"round"});
+    // draw the lower one first so the winner sits on top; 2px surface ring
+    const pts = [[a,"#8a74ff"],[b,"#119c7d"]].sort((p,q)=>p[0]-q[0]);
+    for (const [v,c] of pts) el("circle", {cx:x(v), cy:y, r:9, fill:c, stroke:"#11141e", "stroke-width":2.5});
+    el("text", {x:R + 22, y:y + 5, fill:"#b9c0d0", "font-size":15, "font-family":"JetBrains Mono"}, a.toFixed(1));
+    el("text", {x:R + 72, y:y + 5, fill:"#f3f5fa", "font-size":15, "font-family":"JetBrains Mono", "font-weight":700}, b.toFixed(1));
+  });
+  el("text", {x:R + 22, y:T0 - 14, fill:"#8a74ff", "font-size":12, "font-family":"JetBrains Mono", "font-weight":700}, "Q4");
+  el("text", {x:R + 72, y:T0 - 14, fill:"#3fd9b3", "font-size":12, "font-family":"JetBrains Mono", "font-weight":700}, "Q3");
 </script>
 </body></html>
