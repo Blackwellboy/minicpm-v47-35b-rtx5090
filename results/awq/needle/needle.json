@@ -1,0 +1,115 @@
+{
+  "passed": 12,
+  "n": 12,
+  "max_prompt_tokens": 58403,
+  "rows": [
+    {
+      "target": 4000,
+      "depth": 0.1,
+      "prompt_tokens": 3930,
+      "pass": true,
+      "answer": "4919247",
+      "e2e_s": 6.28,
+      "prefill_tps_proxy": 626.0
+    },
+    {
+      "target": 4000,
+      "depth": 0.5,
+      "prompt_tokens": 3931,
+      "pass": true,
+      "answer": "8095369",
+      "e2e_s": 0.86,
+      "prefill_tps_proxy": 4576.0
+    },
+    {
+      "target": 4000,
+      "depth": 0.9,
+      "prompt_tokens": 3918,
+      "pass": true,
+      "answer": "6495667",
+      "e2e_s": 1.34,
+      "prefill_tps_proxy": 2934.0
+    },
+    {
+      "target": 16000,
+      "depth": 0.1,
+      "prompt_tokens": 15611,
+      "pass": true,
+      "answer": "8422480",
+      "e2e_s": 2.46,
+      "prefill_tps_proxy": 6339.0
+    },
+    {
+      "target": 16000,
+      "depth": 0.5,
+      "prompt_tokens": 15606,
+      "pass": true,
+      "answer": "5112494",
+      "e2e_s": 1.37,
+      "prefill_tps_proxy": 11405.0
+    },
+    {
+      "target": 16000,
+      "depth": 0.9,
+      "prompt_tokens": 15584,
+      "pass": true,
+      "answer": "5900846",
+      "e2e_s": 2.28,
+      "prefill_tps_proxy": 6832.0
+    },
+    {
+      "target": 32000,
+      "depth": 0.1,
+      "prompt_tokens": 31231,
+      "pass": true,
+      "answer": "8101382",
+      "e2e_s": 2.78,
+      "prefill_tps_proxy": 11237.0
+    },
+    {
+      "target": 32000,
+      "depth": 0.5,
+      "prompt_tokens": 31165,
+      "pass": true,
+      "answer": "4405706",
+      "e2e_s": 2.74,
+      "prefill_tps_proxy": 11379.0
+    },
+    {
+      "target": 32000,
+      "depth": 0.9,
+      "prompt_tokens": 31208,
+      "pass": true,
+      "answer": "5768691",
+      "e2e_s": 2.03,
+      "prefill_tps_proxy": 15353.0
+    },
+    {
+      "target": 60000,
+      "depth": 0.1,
+      "prompt_tokens": 58403,
+      "pass": true,
+      "answer": "5171202",
+      "e2e_s": 4.5,
+      "prefill_tps_proxy": 12981.0
+    },
+    {
+      "target": 60000,
+      "depth": 0.5,
+      "prompt_tokens": 58348,
+      "pass": true,
+      "answer": "3095846",
+      "e2e_s": 4.51,
+      "prefill_tps_proxy": 12950.0
+    },
+    {
+      "target": 60000,
+      "depth": 0.9,
+      "prompt_tokens": 58308,
+      "pass": true,
+      "answer": "1108760",
+      "e2e_s": 4.62,
+      "prefill_tps_proxy": 12623.0
+    }
+  ]
+}

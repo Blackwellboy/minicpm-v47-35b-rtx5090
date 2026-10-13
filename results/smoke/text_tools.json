@@ -1,0 +1,39 @@
+{
+ "think_off": {
+  "content": "391",
+  "reasoning": null,
+  "finish": "stop",
+  "s": 0.07
+ },
+ "think_on": {
+  "content": " \n\nSimplify and solve for \\( B \\):  \n1. Combine like terms: \\( 2B + 100 = 110 \\)  \n2. Subtract 100 from both sides: \\( 2B = 10 \\)  \n3. Divide by 2: \\( B = 5 \\)    \n\nThus, the ball costs 5 cents.  \n\n\n5",
+  "reasoning_chars": 715,
+  "think_tag_leak": false,
+  "usage": {
+   "prompt_tokens": 43,
+   "total_tokens": 515,
+   "completion_tokens": 472,
+   "prompt_tokens_details": null,
+   "completion_tokens_details": {
+    "reasoning_tokens": 271
+   }
+  },
+  "finish": "stop",
+  "s": 2.53,
+  "decode_tps": 186.6
+ },
+ "tool": {
+  "tool_calls": [
+   {
+    "id": "chatcmpl-tool-957202a427742f08",
+    "type": "function",
+    "function": {
+     "name": "get_weather",
+     "arguments": "{\"city\": \"Melbourne\", \"unit\": \"c\"}"
+    }
+   }
+  ],
+  "content": null,
+  "finish": "tool_calls"
+ }
+}

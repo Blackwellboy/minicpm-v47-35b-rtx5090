@@ -1,0 +1,47 @@
+{
+  "n": 5,
+  "passed": 5,
+  "thinking": false,
+  "rows": [
+    {
+      "id": "ocr_code",
+      "pass": true,
+      "answer": "INVOICE 48217-QX",
+      "finish": "stop",
+      "prompt_tokens": 98,
+      "e2e_s": 0.229
+    },
+    {
+      "id": "shape_colour",
+      "pass": true,
+      "answer": "Red",
+      "finish": "stop",
+      "prompt_tokens": 95,
+      "e2e_s": 0.052
+    },
+    {
+      "id": "shape_position",
+      "pass": true,
+      "answer": "right",
+      "finish": "stop",
+      "prompt_tokens": 100,
+      "e2e_s": 0.036
+    },
+    {
+      "id": "count_triangles",
+      "pass": true,
+      "answer": "7",
+      "finish": "stop",
+      "prompt_tokens": 98,
+      "e2e_s": 0.063
+    },
+    {
+      "id": "chart_max",
+      "pass": true,
+      "answer": "Tue",
+      "finish": "stop",
+      "prompt_tokens": 231,
+      "e2e_s": 0.14
+    }
+  ]
+}

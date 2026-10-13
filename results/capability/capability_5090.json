@@ -1,0 +1,249 @@
+{
+  "pack_id": "minicpm5_capability_screen_v1_from_correctness20_plus",
+  "n": 26,
+  "passed": 19,
+  "by_category": {
+    "math_reasoning": {
+      "n": 5,
+      "pass": 5
+    },
+    "coding": {
+      "n": 5,
+      "pass": 4
+    },
+    "instruction": {
+      "n": 5,
+      "pass": 3
+    },
+    "tool_json": {
+      "n": 5,
+      "pass": 1
+    },
+    "json_schema": {
+      "n": 2,
+      "pass": 2
+    },
+    "instruction_following": {
+      "n": 2,
+      "pass": 2
+    },
+    "logic_reasoning": {
+      "n": 1,
+      "pass": 1
+    },
+    "false_premise": {
+      "n": 1,
+      "pass": 1
+    }
+  },
+  "rows": [
+    {
+      "id": "math_01",
+      "category": "math_reasoning",
+      "pass": true,
+      "e2e_s": 0.05746053301845677,
+      "detail": "323",
+      "text": "323"
+    },
+    {
+      "id": "math_02",
+      "category": "math_reasoning",
+      "pass": true,
+      "e2e_s": 0.040999828022904694,
+      "detail": "132",
+      "text": "132"
+    },
+    {
+      "id": "math_03",
+      "category": "math_reasoning",
+      "pass": true,
+      "e2e_s": 0.08053295098943636,
+      "detail": "0.05",
+      "text": "0.05"
+    },
+    {
+      "id": "math_04",
+      "category": "math_reasoning",
+      "pass": true,
+      "e2e_s": 0.0707157340075355,
+      "detail": "9.9",
+      "text": "9.9"
+    },
+    {
+      "id": "math_05",
+      "category": "math_reasoning",
+      "pass": true,
+      "e2e_s": 0.03084481501718983,
+      "detail": "6",
+      "text": "6"
+    },
+    {
+      "id": "code_01",
+      "category": "coding",
+      "pass": true,
+      "e2e_s": 0.884394162974786,
+      "detail": "PASS\n",
+      "text": "```python\ndef is_prime(n: int) -> bool:\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\n# Self-check\nif (is_prime(2) and is_prime(17) and not is_prime(1) and not is_prime(15) and is_prime(97)):\n    print(\"PASS\")\nelse:\n    print(\"FAIL\")\n```"
+    },
+    {
+      "id": "code_02",
+      "category": "coding",
+      "pass": true,
+      "e2e_s": 0.5449457819922827,
+      "detail": "PASS\n",
+      "text": "```python\ndef fib(n):\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\nif fib(10) == 55:\n    print(\"PASS\")\nelse:\n    print(\"FAIL\")\n```"
+    },
+    {
+      "id": "code_03",
+      "category": "coding",
+      "pass": true,
+      "e2e_s": 0.32297292101429775,
+      "detail": "PASS\n",
+      "text": "```python\ndef reverse_words(s: str) -> str:\n    return ' '.join(s.split()[::-1])\n\n# Self-check\nprint('PASS' if reverse_words('a bb ccc') == 'ccc bb a' else 'FAIL')\n```"
+    },
+    {
+      "id": "code_04",
+      "category": "coding",
+      "pass": true,
+      "e2e_s": 0.7812028279877268,
+      "detail": "PASS\n",
+      "text": "```python\ndef merge_sorted(a, b):\n    result = []\n    i, j = 0, 0\n    \n    while i < len(a) and j < len(b):\n        if a[i] <= b[j]:\n            result.append(a[i])\n            i += 1\n        else:\n            result.append(b[j])\n            j += 1\n    \n    # Append remaining elements\n    result.extend(a[i:])\n    result.extend(b[j:])\n    \n    return result\n\n# Self-check\nif merge_sorted([1,3],[2,4]) == [1,2,3,4]:\n    print(\"PASS\")\nelse:\n    print(\"FAIL\")\n```"
+    },
+    {
+      "id": "code_05",
+      "category": "coding",
+      "pass": false,
+      "e2e_s": 0.43748795200372115,
+      "detail": "",
+      "text": "```python\ndef count_vowels(s: str) -> int:\n    vowels = 'aeiouAEIOU'\n    return sum(1 for char in s if char in vowels)\n\n# Self-check\nif count_vowels('Education') == 5:\n    pass  # PASS\nelse:\n    pass  # FAIL\n```"
+    },
+    {
+      "id": "inst_01",
+      "category": "instruction",
+      "pass": true,
+      "e2e_s": 0.05701671799761243,
+      "detail": "RED GREEN BLUE",
+      "text": "RED GREEN BLUE"
+    },
+    {
+      "id": "inst_02",
+      "category": "instruction",
+      "pass": true,
+      "e2e_s": 0.03434715300682001,
+      "detail": "PONG",
+      "text": "PONG"
+    },
+    {
+      "id": "inst_03",
+      "category": "instruction",
+      "pass": true,
+      "e2e_s": 0.07841315402765758,
+      "detail": "1,2,3,4,5",
+      "text": "1,2,3,4,5"
+    },
+    {
+      "id": "inst_04",
+      "category": "instruction",
+      "pass": false,
+      "e2e_s": 0.07282484899042174,
+      "detail": "unknown_score_type:json_exact",
+      "text": "{\"ok\":true,\"n\":3}"
+    },
+    {
+      "id": "inst_05",
+      "category": "instruction",
+      "pass": false,
+      "e2e_s": 0.14000281199696474,
+      "detail": "unknown_score_type:json_schema",
+      "text": "{\"name\": \"Ada\", \"age\": 36, \"tags\": [\"math\", \"code\"]}"
+    },
+    {
+      "id": "tool_01",
+      "category": "tool_json",
+      "pass": false,
+      "e2e_s": 0.11733451602049172,
+      "detail": "unknown_score_type:json_exact",
+      "text": "{\"tool\":\"bash\",\"command\":\"echo ok\"}"
+    },
+    {
+      "id": "tool_02",
+      "category": "tool_json",
+      "pass": false,
+      "e2e_s": 0.11321006499929354,
+      "detail": "unknown_score_type:json_exact",
+      "text": "{\"name\":\"get_time\",\"arguments\":{\"tz\":\"UTC\"}}"
+    },
+    {
+      "id": "tool_03",
+      "category": "tool_json",
+      "pass": false,
+      "e2e_s": 0.1445802160014864,
+      "detail": "unknown_score_type:json_exact",
+      "text": "[{\"id\":1,\"status\":\"ok\"},{\"id\":2,\"status\":\"ok\"}]"
+    },
+    {
+      "id": "tool_04",
+      "category": "tool_json",
+      "pass": false,
+      "e2e_s": 0.1345852840167936,
+      "detail": "unknown_score_type:json_exact",
+      "text": "{\"action\":\"search\",\"query\":\"qwen3.8\",\"limit\":5}"
+    },
+    {
+      "id": "tool_05",
+      "category": "tool_json",
+      "pass": true,
+      "e2e_s": 0.03205911201075651,
+      "detail": "true",
+      "text": "true"
+    },
+    {
+      "id": "json_01",
+      "category": "json_schema",
+      "pass": true,
+      "e2e_s": 0.09321310601080768,
+      "detail": "{\"name\": \"Ada\", \"age\": 36}",
+      "text": "{\"name\": \"Ada\", \"age\": 36}"
+    },
+    {
+      "id": "json_02",
+      "category": "json_schema",
+      "pass": true,
+      "e2e_s": 0.10481499100569636,
+      "detail": "{\"ok\": true, \"count\": 3}",
+      "text": "{\"ok\": true, \"count\": 3}"
+    },
+    {
+      "id": "instr_01",
+      "category": "instruction_following",
+      "pass": true,
+      "e2e_s": 0.06201933999545872,
+      "detail": "blue green red",
+      "text": "blue green red"
+    },
+    {
+      "id": "instr_02",
+      "category": "instruction_following",
+      "pass": true,
+      "e2e_s": 0.056850540975574404,
+      "detail": "BANANA",
+      "text": "BANANA"
+    },
+    {
+      "id": "logic_01",
+      "category": "logic_reasoning",
+      "pass": true,
+      "e2e_s": 0.031015723012387753,
+      "detail": "YES",
+      "text": "YES"
+    },
+    {
+      "id": "calib_01",
+      "category": "false_premise",
+      "pass": true,
+      "e2e_s": 0.04902947100345045,
+      "detail": "FALSE_PREMISE",
+      "text": "FALSE_PREMISE"
+    }
+  ]
+}

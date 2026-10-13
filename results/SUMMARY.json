@@ -1,0 +1,464 @@
+{
+ "vision": {
+  "AWQ 16x": {
+   "mmstar": {
+    "metric": "accuracy",
+    "accuracy": 0.72,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 1,
+    "mean_latency_s": 0.569,
+    "wall_time_s": 9.01
+   },
+   "ai2d": {
+    "metric": "accuracy",
+    "accuracy": 0.92,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 2,
+    "mean_latency_s": 0.898,
+    "wall_time_s": 14.35
+   },
+   "mmmu": {
+    "metric": "accuracy",
+    "accuracy": 0.66,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 48,
+    "mean_latency_s": 3.332,
+    "wall_time_s": 55.81
+   },
+   "ocrbench": {
+    "metric": "accuracy",
+    "accuracy": 0.932,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 0.356,
+    "wall_time_s": 5.69
+   },
+   "chartqa": {
+    "metric": "relaxed_acc@5%",
+    "accuracy": 0.728,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 0.384,
+    "wall_time_s": 6.16
+   },
+   "hallusionbench": {
+    "metric": "accuracy",
+    "accuracy": 0.856,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 0.526,
+    "wall_time_s": 8.24
+   },
+   "mathvista": {
+    "metric": "accuracy",
+    "accuracy": 0.784,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 30,
+    "mean_latency_s": 4.539,
+    "wall_time_s": 75.02
+   },
+   "docvqa": {
+    "metric": "ANLS",
+    "accuracy": 0.9517,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 1.106,
+    "wall_time_s": 17.4
+   }
+  },
+  "AWQ 4x/36": {
+   "mmstar": {
+    "metric": "accuracy",
+    "accuracy": 0.732,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 1,
+    "mean_latency_s": 0.64,
+    "wall_time_s": 10.15
+   },
+   "ai2d": {
+    "metric": "accuracy",
+    "accuracy": 0.924,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 1,
+    "mean_latency_s": 0.813,
+    "wall_time_s": 13.42
+   },
+   "mmmu": {
+    "metric": "accuracy",
+    "accuracy": 0.672,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 45,
+    "mean_latency_s": 4.07,
+    "wall_time_s": 67.66
+   },
+   "ocrbench": {
+    "metric": "accuracy",
+    "accuracy": 0.916,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 0.585,
+    "wall_time_s": 9.3
+   },
+   "chartqa": {
+    "metric": "relaxed_acc@5%",
+    "accuracy": 0.78,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 0.555,
+    "wall_time_s": 8.98
+   },
+   "hallusionbench": {
+    "metric": "accuracy",
+    "accuracy": 0.872,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 1.465,
+    "wall_time_s": 23.42
+   },
+   "mathvista": {
+    "metric": "accuracy",
+    "accuracy": 0.768,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 32,
+    "mean_latency_s": 4.93,
+    "wall_time_s": 80.98
+   },
+   "docvqa": {
+    "metric": "ANLS",
+    "accuracy": 0.9762,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 2.663,
+    "wall_time_s": 41.84
+   }
+  },
+  "Q4_K_M 16x": {
+   "mmstar": {
+    "metric": "accuracy",
+    "accuracy": 0.708,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 1,
+    "mean_latency_s": 2.721,
+    "wall_time_s": 42.96
+   },
+   "ai2d": {
+    "metric": "accuracy",
+    "accuracy": 0.908,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 6,
+    "mean_latency_s": 3.159,
+    "wall_time_s": 49.77
+   },
+   "mmmu": {
+    "metric": "accuracy",
+    "accuracy": 0.632,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 51,
+    "mean_latency_s": 15.505,
+    "wall_time_s": 246.62
+   },
+   "ocrbench": {
+    "metric": "accuracy",
+    "accuracy": 0.94,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 1,
+    "mean_latency_s": 3.064,
+    "wall_time_s": 48.24
+   },
+   "chartqa": {
+    "metric": "relaxed_acc@5%",
+    "accuracy": 0.736,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 2.981,
+    "wall_time_s": 47.07
+   },
+   "hallusionbench": {
+    "metric": "accuracy",
+    "accuracy": 0.852,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 3.851,
+    "wall_time_s": 60.28
+   },
+   "mathvista": {
+    "metric": "accuracy",
+    "accuracy": 0.768,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 26,
+    "mean_latency_s": 16.724,
+    "wall_time_s": 266.77
+   },
+   "docvqa": {
+    "metric": "ANLS",
+    "accuracy": 0.9663,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 6.835,
+    "wall_time_s": 107.29
+   }
+  },
+  "Q3 mix 16x": {
+   "mmstar": {
+    "metric": "accuracy",
+    "accuracy": 0.708,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 3.099,
+    "wall_time_s": 48.72
+   },
+   "ai2d": {
+    "metric": "accuracy",
+    "accuracy": 0.916,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 5,
+    "mean_latency_s": 3.344,
+    "wall_time_s": 53.48
+   },
+   "mmmu": {
+    "metric": "accuracy",
+    "accuracy": 0.64,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 48,
+    "mean_latency_s": 16.146,
+    "wall_time_s": 255.97
+   },
+   "ocrbench": {
+    "metric": "accuracy",
+    "accuracy": 0.936,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 3.43,
+    "wall_time_s": 53.9
+   },
+   "chartqa": {
+    "metric": "relaxed_acc@5%",
+    "accuracy": 0.732,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 3.306,
+    "wall_time_s": 52.13
+   },
+   "hallusionbench": {
+    "metric": "accuracy",
+    "accuracy": 0.844,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 4.081,
+    "wall_time_s": 64.53
+   },
+   "mathvista": {
+    "metric": "accuracy",
+    "accuracy": 0.788,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 23,
+    "mean_latency_s": 16.862,
+    "wall_time_s": 269.02
+   },
+   "docvqa": {
+    "metric": "ANLS",
+    "accuracy": 0.9668,
+    "n": 250,
+    "errors": 0,
+    "empty_content": 0,
+    "would_pass_from_reasoning": 0,
+    "finish_length": 0,
+    "mean_latency_s": 7.407,
+    "wall_time_s": 116.23
+   }
+  }
+ },
+ "sixcat": {
+  "AWQ think off": {
+   "overall": 75.0,
+   "categories": {
+    "knowledge": 50.0,
+    "math": 100.0,
+    "truth": 80.0,
+    "instruct": 60.0,
+    "code": 60.0,
+    "tools": 100.0
+   }
+  },
+  "AWQ think on": {
+   "overall": 64.16666666666667,
+   "categories": {
+    "knowledge": 25.0,
+    "math": 100.0,
+    "truth": 25.0,
+    "instruct": 80.0,
+    "code": 70.0,
+    "tools": 85.0
+   }
+  },
+  "AWQ think on, card sampling": {
+   "overall": 65.83333333333333,
+   "categories": {
+    "knowledge": 40.0,
+    "math": 100.0,
+    "truth": 20.0,
+    "instruct": 70.0,
+    "code": 80.0,
+    "tools": 85.0
+   }
+  },
+  "Q4_K_M think off": {
+   "overall": 78.33333333333333,
+   "categories": {
+    "knowledge": 60.0,
+    "math": 100.0,
+    "truth": 80.0,
+    "instruct": 85.0,
+    "code": 50.0,
+    "tools": 95.0
+   }
+  },
+  "Q3 mix think off": {
+   "overall": 75.83333333333333,
+   "categories": {
+    "knowledge": 55.0,
+    "math": 100.0,
+    "truth": 85.0,
+    "instruct": 75.0,
+    "code": 45.0,
+    "tools": 95.0
+   }
+  }
+ },
+ "sweep": {
+  "AWQ (vLLM)": {
+   "1": 184.7,
+   "2": 277.2,
+   "4": 566.4,
+   "8": 1003.4,
+   "16": 1767.2,
+   "32": 2882.5,
+   "64": 2370.8
+  },
+  "Q4_K_M (llama.cpp)": {
+   "1": 196.3,
+   "2": 329.2,
+   "4": 396.8,
+   "8": 439.1,
+   "16": 455.1,
+   "32": 362.5,
+   "64": 357.2
+  },
+  "Q3 mix (llama.cpp)": {
+   "1": 196.1,
+   "2": 336.0,
+   "4": 391.5,
+   "8": 428.1,
+   "16": 454.9,
+   "32": 378.8,
+   "64": 371.2
+  }
+ },
+ "llama_bench": {
+  "Q4_K_M": {
+   "pp512": 8085.9,
+   "pp4096": 7749.1,
+   "tg128": 231.1,
+   "ppl": "5.8612 \u00b1 0.06102"
+  },
+  "mix_q3gud_im": {
+   "pp512": 7687.8,
+   "pp4096": 7188.4,
+   "tg128": 239.0,
+   "ppl": "6.0397 \u00b1 0.06434"
+  }
+ }
+}

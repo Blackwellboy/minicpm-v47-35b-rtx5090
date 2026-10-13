@@ -1,0 +1,13 @@
+{'target': 4000, 'depth': 0.1, 'prompt_tokens': 3930, 'pass': True, 'answer': '4919247', 'e2e_s': 1.74, 'prefill_tps_proxy': 2257.0}
+{'target': 4000, 'depth': 0.5, 'prompt_tokens': 3931, 'pass': True, 'answer': '8095369', 'e2e_s': 0.73, 'prefill_tps_proxy': 5382.0}
+{'target': 4000, 'depth': 0.9, 'prompt_tokens': 3918, 'pass': True, 'answer': '6495667', 'e2e_s': 0.67, 'prefill_tps_proxy': 5837.0}
+{'target': 16000, 'depth': 0.1, 'prompt_tokens': 15611, 'pass': True, 'answer': '8422480', 'e2e_s': 2.24, 'prefill_tps_proxy': 6968.0}
+{'target': 16000, 'depth': 0.5, 'prompt_tokens': 15606, 'pass': True, 'answer': '5112494', 'e2e_s': 2.32, 'prefill_tps_proxy': 6727.0}
+{'target': 16000, 'depth': 0.9, 'prompt_tokens': 15584, 'pass': True, 'answer': '5900846', 'e2e_s': 2.33, 'prefill_tps_proxy': 6699.0}
+{'target': 32000, 'depth': 0.1, 'prompt_tokens': 31231, 'pass': True, 'answer': '8101382', 'e2e_s': 4.65, 'prefill_tps_proxy': 6719.0}
+{'target': 32000, 'depth': 0.5, 'prompt_tokens': 31165, 'pass': True, 'answer': '4405706', 'e2e_s': 4.78, 'prefill_tps_proxy': 6514.0}
+{'target': 32000, 'depth': 0.9, 'prompt_tokens': 31208, 'pass': True, 'answer': '5768691', 'e2e_s': 4.75, 'prefill_tps_proxy': 6573.0}
+{'target': 60000, 'depth': 0.1, 'prompt_tokens': 58403, 'pass': True, 'answer': '5171202', 'e2e_s': 9.51, 'prefill_tps_proxy': 6144.0}
+{'target': 60000, 'depth': 0.5, 'prompt_tokens': 58348, 'pass': True, 'answer': '3095846', 'e2e_s': 9.6, 'prefill_tps_proxy': 6081.0}
+{'target': 60000, 'depth': 0.9, 'prompt_tokens': 58308, 'pass': True, 'answer': '1108760', 'e2e_s': 9.82, 'prefill_tps_proxy': 5940.0}
+NEEDLE 12/12 max_ptok=58403

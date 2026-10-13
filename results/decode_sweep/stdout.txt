@@ -1,0 +1,9 @@
+{'concurrency': 1, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 2.77, 'aggregate_out_tps': 184.7, 'per_req_tps_mean': 184.7}
+{'concurrency': 2, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 3.69, 'aggregate_out_tps': 277.2, 'per_req_tps_mean': 138.8}
+{'concurrency': 4, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 3.62, 'aggregate_out_tps': 566.4, 'per_req_tps_mean': 141.8}
+{'concurrency': 8, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 4.08, 'aggregate_out_tps': 1003.4, 'per_req_tps_mean': 125.6}
+{'concurrency': 16, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 4.64, 'aggregate_out_tps': 1767.2, 'per_req_tps_mean': 110.7}
+{'concurrency': 32, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 5.68, 'aggregate_out_tps': 2882.5, 'per_req_tps_mean': 90.4}
+{'concurrency': 64, 'out_tokens_each': 512, 'prompt_tokens_each': 823, 'wall_s': 13.82, 'aggregate_out_tps': 2370.8, 'per_req_tps_mean': 52.4}
+memory.used [MiB], power.draw [W], temperature.gpu
+28003 MiB, 446.66 W, 76

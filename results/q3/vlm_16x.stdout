@@ -1,0 +1,186 @@
+[mmstar] 250 items (0 resumed), load 0.2s
+[mmstar] 25/250
+[mmstar] 50/250
+[mmstar] 75/250
+[mmstar] 100/250
+[mmstar] 125/250
+[mmstar] 150/250
+[mmstar] 175/250
+[mmstar] 200/250
+[mmstar] 225/250
+[mmstar] 250/250
+[mmstar] accuracy=0.708 n=250 err=0 empty=0 wpr=0 len=0 lat=3.099s wall=48.72s
+[ai2d] 250 items (0 resumed), load 0.1s
+[ai2d] 25/250
+[ai2d] 50/250
+[ai2d] 75/250
+[ai2d] 100/250
+[ai2d] 125/250
+[ai2d] 150/250
+[ai2d] 175/250
+[ai2d] 200/250
+[ai2d] 225/250
+[ai2d] 250/250
+[ai2d] accuracy=0.916 n=250 err=0 empty=0 wpr=0 len=5 lat=3.344s wall=53.48s
+[mmmu] 250 items (0 resumed), load 0.9s
+[mmmu] 25/250
+[mmmu] 50/250
+[mmmu] 75/250
+[mmmu] 100/250
+[mmmu] 125/250
+[mmmu] 150/250
+[mmmu] 175/250
+[mmmu] 200/250
+[mmmu] 225/250
+[mmmu] 250/250
+[mmmu] accuracy=0.64 n=250 err=0 empty=0 wpr=0 len=48 lat=16.146s wall=255.97s
+[ocrbench] 250 items (0 resumed), load 0.0s
+[ocrbench] 25/250
+[ocrbench] 50/250
+[ocrbench] 75/250
+[ocrbench] 100/250
+[ocrbench] 125/250
+[ocrbench] 150/250
+[ocrbench] 175/250
+[ocrbench] 200/250
+[ocrbench] 225/250
+[ocrbench] 250/250
+[ocrbench] accuracy=0.936 n=250 err=0 empty=0 wpr=0 len=0 lat=3.43s wall=53.9s
+[chartqa] 250 items (0 resumed), load 0.1s
+[chartqa] 25/250
+[chartqa] 50/250
+[chartqa] 75/250
+[chartqa] 100/250
+[chartqa] 125/250
+[chartqa] 150/250
+[chartqa] 175/250
+[chartqa] 200/250
+[chartqa] 225/250
+[chartqa] 250/250
+[chartqa] relaxed_acc@5%=0.732 n=250 err=0 empty=0 wpr=0 len=0 lat=3.306s wall=52.13s
+[hallusionbench] 250 items (0 resumed), load 0.1s
+[hallusionbench] 25/250
+[hallusionbench] 50/250
+[hallusionbench] 75/250
+[hallusionbench] 100/250
+[hallusionbench] 125/250
+[hallusionbench] 150/250
+[hallusionbench] 175/250
+[hallusionbench] 200/250
+[hallusionbench] 225/250
+[hallusionbench] 250/250
+[hallusionbench] accuracy=0.844 n=250 err=0 empty=0 wpr=0 len=0 lat=4.081s wall=64.53s
+[mathvista] 250 items (0 resumed), load 0.2s
+[mathvista] 25/250
+[mathvista] 50/250
+[mathvista] 75/250
+[mathvista] 100/250
+[mathvista] 125/250
+[mathvista] 150/250
+[mathvista] 175/250
+[mathvista] 200/250
+[mathvista] 225/250
+[mathvista] 250/250
+[mathvista] accuracy=0.788 n=250 err=0 empty=0 wpr=0 len=23 lat=16.862s wall=269.02s
+[docvqa] 250 items (0 resumed), load 1.1s
+[docvqa] 25/250
+[docvqa] 50/250
+[docvqa] 75/250
+[docvqa] 100/250
+[docvqa] 125/250
+[docvqa] 150/250
+[docvqa] 175/250
+[docvqa] 200/250
+[docvqa] 225/250
+[docvqa] 250/250
+[docvqa] ANLS=0.9668 n=250 err=0 empty=0 wpr=0 len=0 lat=7.407s wall=116.23s
+{
+ "mmstar": {
+  "metric": "accuracy",
+  "accuracy": 0.708,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 0,
+  "mean_latency_s": 3.099,
+  "wall_time_s": 48.72
+ },
+ "ai2d": {
+  "metric": "accuracy",
+  "accuracy": 0.916,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 5,
+  "mean_latency_s": 3.344,
+  "wall_time_s": 53.48
+ },
+ "mmmu": {
+  "metric": "accuracy",
+  "accuracy": 0.64,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 48,
+  "mean_latency_s": 16.146,
+  "wall_time_s": 255.97
+ },
+ "ocrbench": {
+  "metric": "accuracy",
+  "accuracy": 0.936,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 0,
+  "mean_latency_s": 3.43,
+  "wall_time_s": 53.9
+ },
+ "chartqa": {
+  "metric": "relaxed_acc@5%",
+  "accuracy": 0.732,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 0,
+  "mean_latency_s": 3.306,
+  "wall_time_s": 52.13
+ },
+ "hallusionbench": {
+  "metric": "accuracy",
+  "accuracy": 0.844,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 0,
+  "mean_latency_s": 4.081,
+  "wall_time_s": 64.53
+ },
+ "mathvista": {
+  "metric": "accuracy",
+  "accuracy": 0.788,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 23,
+  "mean_latency_s": 16.862,
+  "wall_time_s": 269.02
+ },
+ "docvqa": {
+  "metric": "ANLS",
+  "accuracy": 0.9668,
+  "n": 250,
+  "errors": 0,
+  "empty_content": 0,
+  "would_pass_from_reasoning": 0,
+  "finish_length": 0,
+  "mean_latency_s": 7.407,
+  "wall_time_s": 116.23
+ }
+}

@@ -1,0 +1,217 @@
+{
+  "base_url": "http://127.0.0.1:18111/v1",
+  "model": "MiniCPM-V-4.7-35B-A3B-AWQ",
+  "ts": 1791868226.8205612,
+  "warm": {
+    "e2e_s": 0.04867602500598878,
+    "prompt_tokens": 17,
+    "completion_tokens": 2,
+    "total_tokens": 19,
+    "finish_reason": "stop",
+    "text": "OK",
+    "raw": {
+      "id": "chatcmpl-b9e8ae4f9d1bd4cf",
+      "object": "chat.completion",
+      "created": 1791868226,
+      "model": "MiniCPM-V-4.7-35B-A3B-AWQ",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "OK",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "reasoning": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null,
+          "routed_experts": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": "vllm-0.31.1rc1.dev371+gdf6c7ad03-f7366fa4",
+      "usage": {
+        "prompt_tokens": 17,
+        "total_tokens": 19,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "prompt_text": null,
+      "kv_transfer_params": null,
+      "ec_transfer_params": null,
+      "metrics": null
+    }
+  },
+  "c1_short": {
+    "e2e_s": 0.060317991010379046,
+    "prompt_tokens": 17,
+    "completion_tokens": 2,
+    "total_tokens": 19,
+    "finish_reason": "stop",
+    "text": "OK",
+    "raw": {
+      "id": "chatcmpl-884f0e83380e183e",
+      "object": "chat.completion",
+      "created": 1791868226,
+      "model": "MiniCPM-V-4.7-35B-A3B-AWQ",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "OK",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "reasoning": null
+          },
+          "logprobs": null,
+          "finish_reason": "stop",
+          "stop_reason": null,
+          "token_ids": null,
+          "routed_experts": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": "vllm-0.31.1rc1.dev371+gdf6c7ad03-f7366fa4",
+      "usage": {
+        "prompt_tokens": 17,
+        "total_tokens": 19,
+        "completion_tokens": 2,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "prompt_text": null,
+      "kv_transfer_params": null,
+      "ec_transfer_params": null,
+      "metrics": null
+    }
+  },
+  "c1_long_decode": {
+    "e2e_s": 5.281992206000723,
+    "prompt_tokens": 444,
+    "completion_tokens": 1024,
+    "total_tokens": 1468,
+    "finish_reason": "length",
+    "text": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n128\n129\n130\n131\n132\n133\n134\n135\n136\n137\n138\n139\n140\n141\n142\n143\n144\n145\n146\n147\n148\n149\n150\n151\n152\n153\n154\n155\n156\n157\n158\n159\n160\n161\n162\n163\n164\n165\n166\n167\n168\n169\n170\n171\n172\n173\n174\n175\n176\n177\n178\n179\n180\n181\n182\n183\n184\n185\n186\n187\n188\n189\n190\n191\n192\n193\n194\n195\n196\n197\n198\n199\n200\n201\n202\n203\n204\n205\n206\n207\n208\n209\n210\n211\n212\n213\n214\n215\n216\n217\n218\n219\n220\n221\n222\n223\n224\n225\n226\n227\n228\n229\n230\n231\n232\n233\n234\n235\n236\n237\n238\n239\n240\n241\n242\n243\n244\n245\n246\n247\n248\n249\n250\n251\n252\n253\n254\n255\n256\n257\n258\n259\n260\n261\n262\n263\n264\n265\n266\n267\n268\n269\n270\n271\n272\n273\n274\n275\n276\n277\n278\n279\n280\n281\n282\n283\n",
+    "raw": {
+      "id": "chatcmpl-8b119f11e12d2a7e",
+      "object": "chat.completion",
+      "created": 1791868226,
+      "model": "MiniCPM-V-4.7-35B-A3B-AWQ",
+      "choices": [
+        {
+          "index": 0,
+          "message": {
+            "role": "assistant",
+            "content": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n128\n129\n130\n131\n132\n133\n134\n135\n136\n137\n138\n139\n140\n141\n142\n143\n144\n145\n146\n147\n148\n149\n150\n151\n152\n153\n154\n155\n156\n157\n158\n159\n160\n161\n162\n163\n164\n165\n166\n167\n168\n169\n170\n171\n172\n173\n174\n175\n176\n177\n178\n179\n180\n181\n182\n183\n184\n185\n186\n187\n188\n189\n190\n191\n192\n193\n194\n195\n196\n197\n198\n199\n200\n201\n202\n203\n204\n205\n206\n207\n208\n209\n210\n211\n212\n213\n214\n215\n216\n217\n218\n219\n220\n221\n222\n223\n224\n225\n226\n227\n228\n229\n230\n231\n232\n233\n234\n235\n236\n237\n238\n239\n240\n241\n242\n243\n244\n245\n246\n247\n248\n249\n250\n251\n252\n253\n254\n255\n256\n257\n258\n259\n260\n261\n262\n263\n264\n265\n266\n267\n268\n269\n270\n271\n272\n273\n274\n275\n276\n277\n278\n279\n280\n281\n282\n283\n",
+            "refusal": null,
+            "annotations": null,
+            "audio": null,
+            "function_call": null,
+            "reasoning": null
+          },
+          "logprobs": null,
+          "finish_reason": "length",
+          "stop_reason": null,
+          "token_ids": null,
+          "routed_experts": null
+        }
+      ],
+      "service_tier": null,
+      "system_fingerprint": "vllm-0.31.1rc1.dev371+gdf6c7ad03-f7366fa4",
+      "usage": {
+        "prompt_tokens": 444,
+        "total_tokens": 1468,
+        "completion_tokens": 1024,
+        "prompt_tokens_details": null,
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "prompt_logprobs": null,
+      "prompt_token_ids": null,
+      "prompt_text": null,
+      "kv_transfer_params": null,
+      "ec_transfer_params": null,
+      "metrics": null
+    }
+  },
+  "concurrency": [
+    {
+      "concurrency": 1,
+      "n_requests": 8,
+      "ok": 8,
+      "errors": [],
+      "wall_s": 0.28690756601281464,
+      "aggregate_out_tps": 55.76708980649665,
+      "e2e_p50": 0.03302619299211074,
+      "e2e_p95": 0.04952948034479049,
+      "per_req_tps_p50": 60.890715399963895,
+      "completion_tokens_sum": 16
+    },
+    {
+      "concurrency": 2,
+      "n_requests": 8,
+      "ok": 8,
+      "errors": [],
+      "wall_s": 0.23730956399231218,
+      "aggregate_out_tps": 67.42248281454991,
+      "e2e_p50": 0.05787084699841216,
+      "e2e_p95": 0.06705132975475862,
+      "per_req_tps_p50": 34.563331808645124,
+      "completion_tokens_sum": 16
+    },
+    {
+      "concurrency": 4,
+      "n_requests": 8,
+      "ok": 8,
+      "errors": [],
+      "wall_s": 0.12890780801535584,
+      "aggregate_out_tps": 124.11971195797571,
+      "e2e_p50": 0.06078124149644282,
+      "e2e_p95": 0.07744705464428989,
+      "per_req_tps_p50": 33.93366796765997,
+      "completion_tokens_sum": 16
+    },
+    {
+      "concurrency": 8,
+      "n_requests": 16,
+      "ok": 16,
+      "errors": [],
+      "wall_s": 0.23182448599254712,
+      "aggregate_out_tps": 163.91711098723908,
+      "e2e_p50": 0.11394756549270824,
+      "e2e_p95": 0.11536023951339303,
+      "per_req_tps_p50": 18.50656523295165,
+      "completion_tokens_sum": 38
+    },
+    {
+      "concurrency": 16,
+      "n_requests": 32,
+      "ok": 32,
+      "errors": [],
+      "wall_s": 0.28960131999338046,
+      "aggregate_out_tps": 296.95997242680295,
+      "e2e_p50": 0.13928810349898413,
+      "e2e_p95": 0.1564812111944775,
+      "per_req_tps_p50": 19.40822582282162,
+      "completion_tokens_sum": 86
+    }
+  ]
+}

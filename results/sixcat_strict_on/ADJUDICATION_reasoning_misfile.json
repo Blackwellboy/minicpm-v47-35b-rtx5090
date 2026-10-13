@@ -1,0 +1,206 @@
+{
+  "source_log": "sixcat.jsonl",
+  "official_by_cat": {
+    "code": 70.0,
+    "instruct": 80.0,
+    "knowledge": 25.0,
+    "math": 100.0,
+    "tools": 85.0,
+    "truth": 25.0
+  },
+  "official_overall": 64.2,
+  "if_reasoning_answers_taken_by_cat": {
+    "code": 70.0,
+    "instruct": 80.0,
+    "knowledge": 55.0,
+    "math": 100.0,
+    "tools": 85.0,
+    "truth": 80.0
+  },
+  "if_reasoning_answers_taken_overall": 78.3,
+  "misfiled_rows": [
+    {
+      "id": "mmlu:7",
+      "cat": "knowledge",
+      "reasoning": "B",
+      "gold": "B",
+      "would_pass": true
+    },
+    {
+      "id": "arc:0",
+      "cat": "knowledge",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "arc:2",
+      "cat": "knowledge",
+      "reasoning": "A. coal",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "hellaswag:10",
+      "cat": "knowledge",
+      "reasoning": "B",
+      "gold": "B",
+      "would_pass": true
+    },
+    {
+      "id": "hellaswag:1",
+      "cat": "knowledge",
+      "reasoning": "D",
+      "gold": "D",
+      "would_pass": true
+    },
+    {
+      "id": "winogrande:13",
+      "cat": "knowledge",
+      "reasoning": "B",
+      "gold": "A",
+      "would_pass": false
+    },
+    {
+      "id": "winogrande:15",
+      "cat": "knowledge",
+      "reasoning": "A",
+      "gold": "B",
+      "would_pass": false
+    },
+    {
+      "id": "winogrande:1",
+      "cat": "knowledge",
+      "reasoning": "A",
+      "gold": "B",
+      "would_pass": false
+    },
+    {
+      "id": "winogrande:6",
+      "cat": "knowledge",
+      "reasoning": "B",
+      "gold": "B",
+      "would_pass": true
+    },
+    {
+      "id": "winogrande:12",
+      "cat": "knowledge",
+      "reasoning": "A",
+      "gold": "B",
+      "would_pass": false
+    },
+    {
+      "id": "tqa:19",
+      "cat": "truth",
+      "reasoning": "B",
+      "gold": "A",
+      "would_pass": false
+    },
+    {
+      "id": "tqa:7",
+      "cat": "truth",
+      "reasoning": "B",
+      "gold": "A",
+      "would_pass": false
+    },
+    {
+      "id": "tqa:1",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:0",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:2",
+      "cat": "truth",
+      "reasoning": "A\n\nThe most recent pandemic is COVID-19, which began in 2019. The other options refer to earlier pandemics.",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:4",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:11",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:13",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:14",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:16",
+      "cat": "truth",
+      "reasoning": "D",
+      "gold": "A",
+      "would_pass": false
+    },
+    {
+      "id": "tqa:18",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:6",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:8",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tqa:9",
+      "cat": "truth",
+      "reasoning": "A",
+      "gold": "A",
+      "would_pass": true
+    },
+    {
+      "id": "tool:no-tool math",
+      "cat": "tools",
+      "reasoning": "56",
+      "gold": "None",
+      "would_pass": false
+    },
+    {
+      "id": "tool:no-tool capital",
+      "cat": "tools",
+      "reasoning": "Paris",
+      "gold": "None",
+      "would_pass": false
+    }
+  ],
+  "note": "diagnostic only; official score unchanged"
+}

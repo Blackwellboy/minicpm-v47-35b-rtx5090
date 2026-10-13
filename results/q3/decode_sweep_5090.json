@@ -1,0 +1,58 @@
+[
+  {
+    "concurrency": 1,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 2.61,
+    "aggregate_out_tps": 196.1,
+    "per_req_tps_mean": 196.1
+  },
+  {
+    "concurrency": 2,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 3.05,
+    "aggregate_out_tps": 336.0,
+    "per_req_tps_mean": 168.7
+  },
+  {
+    "concurrency": 4,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 5.23,
+    "aggregate_out_tps": 391.5,
+    "per_req_tps_mean": 98.6
+  },
+  {
+    "concurrency": 8,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 9.57,
+    "aggregate_out_tps": 428.1,
+    "per_req_tps_mean": 53.7
+  },
+  {
+    "concurrency": 16,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 18.01,
+    "aggregate_out_tps": 454.9,
+    "per_req_tps_mean": 28.5
+  },
+  {
+    "concurrency": 32,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 43.26,
+    "aggregate_out_tps": 378.8,
+    "per_req_tps_mean": 18.7
+  },
+  {
+    "concurrency": 64,
+    "out_tokens_each": 512,
+    "prompt_tokens_each": 823,
+    "wall_s": 88.28,
+    "aggregate_out_tps": 371.2,
+    "per_req_tps_mean": 12.5
+  }
+]

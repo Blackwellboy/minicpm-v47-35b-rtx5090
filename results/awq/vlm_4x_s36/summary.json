@@ -1,0 +1,119 @@
+{
+  "created_utc": "2026-10-13T08:34:49Z",
+  "argv": [
+    "$CAMPAIGN/scripts/vlm_quickeval.py",
+    "--base-url",
+    "http://127.0.0.1:18111/v1",
+    "--model",
+    "MiniCPM-V-4.7-35B-A3B-AWQ",
+    "--bench",
+    "all",
+    "--n",
+    "250",
+    "--concurrency",
+    "16",
+    "--thinking",
+    "off",
+    "--out-dir",
+    "$CAMPAIGN/results/awq/vlm_4x_s36"
+  ],
+  "total_wall_time_s": 257.46,
+  "table": {
+    "mmstar": {
+      "metric": "accuracy",
+      "accuracy": 0.732,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 1,
+      "mean_latency_s": 0.64,
+      "wall_time_s": 10.15
+    },
+    "ai2d": {
+      "metric": "accuracy",
+      "accuracy": 0.924,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 1,
+      "mean_latency_s": 0.813,
+      "wall_time_s": 13.42
+    },
+    "mmmu": {
+      "metric": "accuracy",
+      "accuracy": 0.672,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 45,
+      "mean_latency_s": 4.07,
+      "wall_time_s": 67.66
+    },
+    "ocrbench": {
+      "metric": "accuracy",
+      "accuracy": 0.916,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 0,
+      "mean_latency_s": 0.585,
+      "wall_time_s": 9.3
+    },
+    "chartqa": {
+      "metric": "relaxed_acc@5%",
+      "accuracy": 0.78,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 0,
+      "mean_latency_s": 0.555,
+      "wall_time_s": 8.98
+    },
+    "hallusionbench": {
+      "metric": "accuracy",
+      "accuracy": 0.872,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 0,
+      "mean_latency_s": 1.465,
+      "wall_time_s": 23.42
+    },
+    "mathvista": {
+      "metric": "accuracy",
+      "accuracy": 0.768,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 32,
+      "mean_latency_s": 4.93,
+      "wall_time_s": 80.98
+    },
+    "docvqa": {
+      "metric": "ANLS",
+      "accuracy": 0.9762,
+      "n": 250,
+      "errors": 0,
+      "empty_content": 0,
+      "would_pass_from_reasoning": 0,
+      "finish_length": 0,
+      "mean_latency_s": 2.663,
+      "wall_time_s": 41.84
+    }
+  },
+  "caveats": [
+    "AI2D: test shard 0 of 2 only (1544 of 3088 rows).",
+    "DocVQA: validation shard 0 of 6 only (892 rows), capped at 300.",
+    "MMMU: multiple-choice items only; open-ended skipped.",
+    "HallusionBench: image split only; metric is per-question aAcc.",
+    "MathVista: rule-based extraction, no GPT judge; expect a few points below judge-scored numbers.",
+    "All MC extraction is rule-only (no VLMEvalKit LLM-judge fallback); subsets, not full sets."
+  ]
+}

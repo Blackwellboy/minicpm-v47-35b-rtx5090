@@ -1,0 +1,44 @@
+{
+  "raw_file": "capability_5090.json",
+  "raw_passed": 19,
+  "n": 26,
+  "adjudicated_passed": 25,
+  "changes": [
+    {
+      "id": "inst_04",
+      "raw_pass": false,
+      "adjudicated_pass": true,
+      "reason": "missing scorer for json_exact"
+    },
+    {
+      "id": "inst_05",
+      "raw_pass": false,
+      "adjudicated_pass": true,
+      "reason": "missing scorer for json_schema"
+    },
+    {
+      "id": "tool_01",
+      "raw_pass": false,
+      "adjudicated_pass": true,
+      "reason": "missing scorer for json_exact"
+    },
+    {
+      "id": "tool_02",
+      "raw_pass": false,
+      "adjudicated_pass": true,
+      "reason": "missing scorer for json_exact"
+    },
+    {
+      "id": "tool_03",
+      "raw_pass": false,
+      "adjudicated_pass": true,
+      "reason": "missing scorer for json_exact"
+    },
+    {
+      "id": "tool_04",
+      "raw_pass": false,
+      "adjudicated_pass": true,
+      "reason": "missing scorer for json_exact"
+    }
+  ]
+}

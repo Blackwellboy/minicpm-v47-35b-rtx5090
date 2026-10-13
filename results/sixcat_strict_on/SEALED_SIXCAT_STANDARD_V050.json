@@ -1,0 +1,120 @@
+{
+  "protocol_id": "SIXCAT_STANDARD_V050",
+  "status": "CURRENT",
+  "frozen_utc": "2026-08-28",
+  "harness": {
+    "repo": "https://github.com/vcruz305/sixcat-eval",
+    "name": "sixcat-eval",
+    "version": "0.5.0",
+    "commit": "a38d990a46c2c57aabcc3a831d6d87d998c55297",
+    "tag": "v0.5.0",
+    "annotated_tag_object": "eb3ba82fcb5fb976aac18fec83030098c6f5b8e6"
+  },
+  "parser": "v4",
+  "result_schema": "sixcat-v2",
+  "selection_profile": "challenge-v1",
+  "selection_fingerprint": "05c04833fcdb",
+  "policy": {
+    "default_cli_policy": "strict",
+    "thinking_mode_default_for_strict": "off",
+    "thinking_independent_flag": true,
+    "strict_budgets": {
+      "knowledge": 768,
+      "math": 1197,
+      "truth": 64,
+      "instruct": 1281,
+      "code": 1024,
+      "tools": 256
+    },
+    "thinking_on_task_ceilings": {
+      "knowledge": 8192,
+      "math": 16384,
+      "truth": 8192,
+      "instruct": 32768,
+      "code": 32768,
+      "tools": 16384
+    },
+    "legacy_0_4_x_thinking_budgets_fingerprint_only": {
+      "knowledge": 1597,
+      "math": 2048,
+      "truth": 1892,
+      "instruct": 6767,
+      "code": 3072,
+      "tools": 768
+    },
+    "safety_ceiling": 32768,
+    "trunc_in_think": "empty answer + finish=length while stuck in thinking => FAIL; do not extract answer from reasoning",
+    "records_reasoning_and_answer_tokens_when_api_exposes": true,
+    "policy_fingerprint": "91b9b9ed353e",
+    "policy_fingerprint_note": "Upstream sixcat.policy.strict_policy() at 0.5.0@a38d990 (thinking=False builtin) fingerprints to 91b9b9ed353e. CLI path that always calls override_thinking(..., False) annotates source and yields 8ad5460a8ed5; record the actual run fingerprint in receipts. Canonical V050 pin uses builtin strict/off 91b9b9ed353e.",
+    "policy_fingerprint_cli_thinking_off_explicit": "8ad5460a8ed5"
+  },
+  "request_timeout_seconds_default": 1800.0,
+  "scope": {
+    "limit_default": 20,
+    "limit_scope": "per_category",
+    "categories": [
+      "knowledge",
+      "math",
+      "truth",
+      "instruct",
+      "code",
+      "tools"
+    ],
+    "full_flag": "optional --full expands item pool; still per-category limit semantics unless documented otherwise"
+  },
+  "code_execution_mode": "host-guarded",
+  "chat_template_requirements": {
+    "glm_5_x": {
+      "vendor_family": "glm-5.x",
+      "reasoning_effort": "high",
+      "preclose_think": true,
+      "stop_sequences": [
+        "<|system|>",
+        "<|user|>",
+        "<|end|>",
+        "<|eot|>",
+        "<|eot_id|>",
+        "<|endoftext|>"
+      ],
+      "upstream_jinja_path": "templates/GLM-5.3-Flash-chat-template-endthink.jinja",
+      "upstream_jinja_runtime_note": "Upstream docs describe llama-server --chat-template-file usage. Do NOT blindly apply to vLLM/B12X; prove equivalent enable_thinking / answer-channel behavior on the actual serve stack."
+    }
+  },
+  "comparability": {
+    "think_on_0_5_vs_0_4_x": "NOT_COMPARABLE",
+    "cross_protocol_identity": "FAIL_CLOSED",
+    "legacy_pins": {
+      "SIXCAT_STANDARD_V045": {
+        "version": "0.4.5",
+        "commit": "a03058625f734f8d2f56cff9b6a9233b23533bf9",
+        "status": "LEGACY_PROTOCOL"
+      },
+      "SIXCAT_0_4_0_QWEN_RECEIPTS": {
+        "version": "0.4.0",
+        "commit": "ad9d62f811d03ab760463f6778ae770ebe00e03b",
+        "status": "LEGACY_PROTOCOL"
+      }
+    }
+  },
+  "verification": {
+    "upstream_read": [
+      "README.md",
+      "RELEASE_NOTES.md",
+      "pyproject.toml",
+      "sixcat/policy.py",
+      "sixcat/model-policies.json",
+      "templates/GLM-5.3-Flash-chat-template-endthink.jinja"
+    ],
+    "commits_since_0_4_5_pin": [
+      "8a988cc fix: GLM-5.x default reasoning_effort is high, not max",
+      "6aba6c4 0.5.0: task-shaped think ceilings + rtok/atok table",
+      "580a817 glm-5.x: preclose </think> so Q2 leaves think and emits an answer",
+      "a38d990 docs: 0.5.0 release notes, README, GLM-5.3 end-think template"
+    ]
+  },
+  "protocol_fingerprint_sha256": "ea1d512b8d51d00b99dd58277bd6410b6b996fec0516c433562da437e206bbe9",
+  "policy_fingerprint": "91b9b9ed353e",
+  "thinking_mode": "off",
+  "policy_name": "strict"
+}

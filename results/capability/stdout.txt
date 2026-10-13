@@ -1,0 +1,65 @@
+math_01 PASS 0.06s
+math_02 PASS 0.04s
+math_03 PASS 0.08s
+math_04 PASS 0.07s
+math_05 PASS 0.03s
+code_01 PASS 0.88s
+code_02 PASS 0.54s
+code_03 PASS 0.32s
+code_04 PASS 0.78s
+code_05 FAIL 0.44s
+inst_01 PASS 0.06s
+inst_02 PASS 0.03s
+inst_03 PASS 0.08s
+inst_04 FAIL 0.07s
+inst_05 FAIL 0.14s
+tool_01 FAIL 0.12s
+tool_02 FAIL 0.11s
+tool_03 FAIL 0.14s
+tool_04 FAIL 0.13s
+tool_05 PASS 0.03s
+json_01 PASS 0.09s
+json_02 PASS 0.10s
+instr_01 PASS 0.06s
+instr_02 PASS 0.06s
+logic_01 PASS 0.03s
+calib_01 PASS 0.05s
+{
+  "pack_id": "minicpm5_capability_screen_v1_from_correctness20_plus",
+  "n": 26,
+  "passed": 19,
+  "by_category": {
+    "math_reasoning": {
+      "n": 5,
+      "pass": 5
+    },
+    "coding": {
+      "n": 5,
+      "pass": 4
+    },
+    "instruction": {
+      "n": 5,
+      "pass": 3
+    },
+    "tool_json": {
+      "n": 5,
+      "pass": 1
+    },
+    "json_schema": {
+      "n": 2,
+      "pass": 2
+    },
+    "instruction_following": {
+      "n": 2,
+      "pass": 2
+    },
+    "logic_reasoning": {
+      "n": 1,
+      "pass": 1
+    },
+    "false_premise": {
+      "n": 1,
+      "pass": 1
+    }
+  }
+}

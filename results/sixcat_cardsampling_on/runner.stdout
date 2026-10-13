@@ -1,0 +1,395 @@
+log $CAMPAIGN/results/sixcat_cardsampling_on/sixcat.jsonl resume=True max_minutes=0.0
+FAIL knowledge/mmlu:18 pred=C gold=A
+FAIL knowledge/mmlu:8 pred=A gold=B
+FAIL knowledge/mmlu:7 pred= gold=B
+PASS knowledge/mmlu:4 pred=C gold=C
+PASS knowledge/mmlu:2 pred=B gold=B
+FAIL knowledge/arc:13 pred= gold=D
+PASS knowledge/arc:7 pred=A gold=A
+PASS knowledge/arc:0 pred=A gold=A
+PASS knowledge/arc:1 pred=B gold=B
+FAIL knowledge/arc:2 pred= gold=A
+FAIL knowledge/hellaswag:10 pred= gold=B
+PASS knowledge/hellaswag:16 pred=D gold=D
+PASS knowledge/hellaswag:14 pred=B gold=B
+PASS knowledge/hellaswag:1 pred=D gold=D
+FAIL knowledge/hellaswag:17 pred=C gold=D
+FAIL knowledge/winogrande:13 pred= gold=A
+FAIL knowledge/winogrande:15 pred= gold=B
+FAIL knowledge/winogrande:1 pred= gold=B
+FAIL knowledge/winogrande:6 pred= gold=B
+FAIL knowledge/winogrande:12 pred= gold=B
+PASS math/gsm:18 pred=70 gold=70
+PASS math/gsm:9 pred=6000 gold=6000
+PASS math/gsm:0 pred=29 gold=29
+PASS math/gsm:12 pred=18 gold=18
+PASS math/gsm:1 pred=70 gold=70
+PASS math/gsm:2 pred=5 gold=5
+PASS math/gsm:3 pred=11232 gold=11232
+PASS math/gsm:4 pred=5 gold=5
+PASS math/gsm:10 pred=22 gold=22
+PASS math/gsm:11 pred=5 gold=5
+PASS math/gsm:13 pred=32 gold=32
+PASS math/gsm:14 pred=60 gold=60
+PASS math/gsm:15 pred=60 gold=60
+PASS math/gsm:16 pred=79 gold=79
+PASS math/gsm:17 pred=64 gold=64
+PASS math/gsm:19 pred=90 gold=90
+PASS math/gsm:5 pred=150 gold=150
+PASS math/gsm:6 pred=4 gold=4
+PASS math/gsm:7 pred=5 gold=5
+PASS math/gsm:8 pred=2600 gold=2600
+FAIL truth/tqa:17 pred=C gold=A
+FAIL truth/tqa:19 pred= gold=A
+FAIL truth/tqa:7 pred= gold=A
+FAIL truth/tqa:1 pred= gold=A
+FAIL truth/tqa:15 pred= gold=A
+FAIL truth/tqa:0 pred= gold=A
+FAIL truth/tqa:3 pred= gold=A
+FAIL truth/tqa:2 pred= gold=A
+FAIL truth/tqa:4 pred= gold=A
+PASS truth/tqa:10 pred=A gold=A
+FAIL truth/tqa:11 pred= gold=A
+PASS truth/tqa:12 pred=A gold=A
+FAIL truth/tqa:13 pred= gold=A
+FAIL truth/tqa:14 pred= gold=A
+FAIL truth/tqa:16 pred= gold=A
+FAIL truth/tqa:18 pred= gold=A
+PASS truth/tqa:5 pred=A gold=A
+FAIL truth/tqa:6 pred= gold=A
+PASS truth/tqa:8 pred=A gold=A
+FAIL truth/tqa:9 pred= gold=A
+PASS instruct/ifeval:1342 pred=
+
+Start by identifying a business idea that aligns with your passions and skills. *Conduct thorough self-assessment to u
+PASS instruct/ifeval:1219 pred=
+
+NIKE IS THE BETTER BRAND FOR SNEAKERS COMPARED TO PRADA. NIKE IS A LEADER IN SNEAKER INNOVATION, CUSHIONING, AND PERFO
+FAIL instruct/ifeval:1379 pred=
+
+*There* *was* *a* *young* *lady* *named* *Sarah*  
+*In* *a* *town* *near* *the* *bar*  
+*Where* *it's* *always* *ninet
+FAIL instruct/ifeval:1174 pred=
+
+*Input your coordinates* to get *optimal weather forecast output*.
+PASS instruct/ifeval:1040 pred=
+
+"Matthias Algiers
+
+Contact: matthias.algiers@email.com | (555) 123-4567 | New York, NY
+
+Objective: Proactive professio
+PASS instruct/ifeval:1348 pred=
+
+Brilliant Le Hou
+
+*Early Life and Education* Brilliant Le Hou was born in a rural community. He excelled in mathematic
+PASS instruct/ifeval:142 pred=
+
+"A professional morphologist knocks on a cat's door to study its morphology. The cat knocks back. The morphologist say
+PASS instruct/ifeval:1000 pred=
+
+Raymond III Count of Tripoli was a major Crusader nobleman in the 12th century. He ruled the County of Tripoli a key C
+FAIL instruct/ifeval:1300 pred=
+
+**Proposal: Investigating Language Shifts Over Generations**
+
+Language is a dynamic system that alters over time. Stud
+FAIL instruct/ifeval:1069 pred=
+
+Subject: Invitation to Strategic Planning Meeting: Aligning Our Collective Efforts
+
+Dear Esteemed Participants,
+
+I am 
+PASS instruct/ifeval:1392 pred=
+
+<<US Economic Update: Inflation and Employment Trends>>
+
+The latest reports from the Bureau of Labor Statistics, which
+PASS instruct/ifeval:1418 pred=
+
+The sun rises slowly.
+Golden light floods the field.
+Birds sing in the trees.
+Dew drops glitter on grass.
+A gentle bre
+FAIL instruct/ifeval:1481 pred=
+
+**Antonia Maj**  
+*Coffee Enthusiast & Professional Weirdo*
+
+SECTION 1: Why I’m Basically a Coffee Plant (But with Bet
+PASS instruct/ifeval:1375 pred=
+
+```java
+// Vulnerable code snippet: Improper use of Runtime.exec() with unsanitized user input
+import java.io.IOExcept
+PASS instruct/ifeval:127 pred=
+
+### Crafting Your Parenting Plan: A Guide to Structured Care
+
+You may have to meet with a helper to work out a parenti
+PASS instruct/ifeval:143 pred=
+
+The colt starts at 5 feet tall, which is 60 inches (since 1 foot = 12 inches). It grows 6 inches per month. Over 3 yea
+PASS instruct/ifeval:1402 pred=
+
+I propose a prominent college with open enrollment and proper regional accreditation: Santa Monica College. This popul
+FAIL instruct/ifeval:1314 pred=
+
+Avocado is not a fish; salmon is a fish.
+
+**Salmon and Avocado: A Nutritional Duo from Different Worlds**
+
+Salmon and 
+PASS instruct/ifeval:1287 pred=
+
+in the land of holy wars, a man named john found his way to the throne. not through battle alone, but through the quie
+PASS instruct/ifeval:1516 pred=
+
+i spent the night on netflix
+with nothing else to fix
+the episodes kept flying by
+as if they would never die
+and now i
+FAIL code/HumanEval/145 pred=
+
+```python
+def order_by_points(nums):
+    """
+    Write a function which sorts the given list of integers
+    in ascending order according to the sum of their digits.
+    Note: if there are several i
+PASS code/HumanEval/132 pred=
+
+```python
+def is_nested(string):
+    '''
+    Create a function that takes a string as input which contains only square brackets.
+    The function should return True if and only if there is a valid s
+PASS code/HumanEval/130 pred=
+
+```python
+def tri(n):
+    """
+    Returns a list of the first n+1 numbers of the Tribonacci sequence.
+    """
+    if n < 0:
+        return []
+    # Create an array with extra slot for n+1 (needed fo
+FAIL code/HumanEval/32 pred=
+
+```python
+import math
+
+
+def poly(xs: list, x: float):
+    """
+    Evaluates polynomial with coefficients xs at point x.
+    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n
+    """
+    retu
+PASS code/HumanEval/127 pred=
+
+```python
+def intersection(interval1, interval2):
+    """
+    Determines whether the length of the intersection of two closed intervals is a prime number.
+    """
+    # Compute the intersection inte
+PASS code/HumanEval/134 pred=
+
+```python
+def check_if_last_char_is_a_letter(txt):
+    '''
+    Create a function that returns True if the last character
+    of a given string is an alphabetical character and is not
+    a part of a
+PASS code/HumanEval/108 pred=
+
+```python
+def count_nums(arr):
+    """
+    Write a function count_nums which takes an array of integers and returns
+    the number of elements which has a sum of digits > 0.
+    If a number is negat
+PASS code/HumanEval/93 pred=
+
+```python
+def encode(message):
+    """
+    Write a function that takes a message, and encodes in such a 
+    way that it swaps case of all letters, replaces all vowels in 
+    the message with the l
+PASS code/HumanEval/83 pred=
+
+```python
+def starts_one_ends(n):
+    """
+    Given a positive integer n, return the count of the numbers of n-digit
+    positive integers that start or end with 1.
+    """
+    if n == 1:
+        re
+PASS code/HumanEval/65 pred=
+
+```python
+def circular_shift(x, shift):
+    """Circular shift the digits of the integer x, shift the digits right by shift
+    and return the result as a string.
+    If shift > number of digits, ret
+PASS code/HumanEval/129 pred=
+
+```python
+def minPath(grid, k):
+    N = len(grid)
+    # Find the cell with value 1
+    start_r, start_c = -1, -1
+    for i in range(N):
+        for j in range(N):
+            if grid[i][j] == 1:
+   
+FAIL code/HumanEval/91 pred=
+
+```python
+import re
+
+def is_bored(S):
+    """
+    You'll be given a string of words, and your task is to count the number
+    of boredoms. A boredom is a sentence that starts with the word "I".
+    
+PASS code/HumanEval/115 pred=
+
+```python
+def max_fill(grid, capacity):
+    import math
+    total_lowers = 0
+    for row in grid:
+        water_units = sum(row)
+        lowers = math.ceil(water_units / capacity)
+        total_lowe
+PASS code/HumanEval/120 pred=
+
+```python
+def maximum(arr, k):
+    """
+    Given an array arr of integers and a positive integer k, return a sorted list 
+    of length k with the maximum k numbers in arr.
+
+    Example 1:
+
+        
+PASS code/HumanEval/125 pred=
+
+```python
+def split_words(txt):
+    '''
+    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you
+    should split on commas ',' if no commas 
+PASS code/HumanEval/126 pred=
+
+```python
+def is_sorted(lst):
+    '''
+    Given a list of numbers, return whether or not they are sorted
+    in ascending order. If list has more than 1 duplicate of the same
+    number, return Fals
+FAIL code/HumanEval/140 pred=
+
+```python
+import re
+
+def fix_spaces(text):
+    # Replace sequences of 3 or more spaces with a single dash
+    text = re.sub(r' {3,}', '-', text)
+    # Replace all remaining spaces with underscores
+ 
+PASS code/HumanEval/54 pred=
+
+```python
+def same_chars(s0: str, s1: str):
+    """
+    Check if two words have the same characters.
+    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')
+    True
+    >>> same_chars('abcd', 'dddddd
+PASS code/HumanEval/160 pred=
+
+```python
+def do_algebra(operator, operand):
+    """
+    Given two lists operator, and operand. The first list has basic algebra operations, and 
+    the second list is a list of integers. Use the t
+PASS code/HumanEval/118 pred=
+
+```python
+def get_closest_vowel(word):
+    vowels = set('aeiouAEIOU')
+    n = len(word)
+    for i in range(n-2, 0, -1):
+        if word[i] in vowels:
+            if word[i-1] not in vowels and word[
+PASS tools/tool:two exact adds pred=[('add', {'a': 19, 'b': 23}), ('add', {'a': 100, 'b': 1})] gold=[('add', {'a': 19, 'b': 23}), ('add', {'a': 100, 'b': 1})]
+PASS tools/tool:exact multiline write pred=[('write_file', {'path': 'reports/run note.txt', 'content': 'alpha\nbeta: 2'})] gold=[('write_file', {'path': 'reports/run note.txt', 'content': 'alpha\nbeta: 2'})]
+PASS tools/tool:confusable exact read pred=[('read_file', {'path': 'data/archive 2026/config.yaml'})] gold=[('read_file', {'path': 'data/archive 2026/config.yaml'})]
+PASS tools/tool:exact quoted search pred=[('search', {'query': 'HumanEval+ edge case failures'})] gold=[('search', {'query': 'HumanEval+ edge case failures'})]
+PASS tools/tool:read license distractors pred=[('read_file', {'path': 'LICENSE'})] gold=[('read_file', {'path': 'LICENSE'})]
+PASS tools/tool:search not filesystem pred=[('search', {'query': 'MixEval benchmark paper'})] gold=[('search', {'query': 'MixEval benchmark paper'})]
+PASS tools/tool:exact hidden list pred=[('list_dir', {'path': '.github/workflows'})] gold=[('list_dir', {'path': '.github/workflows'})]
+PASS tools/tool:write json literal pred=[('write_file', {'path': 'out/result.json', 'content': '{"ok":true,"n":3}'})] gold=[('write_file', {'path': 'out/result.json', 'content': '{"ok":true,"n":3}'})]
+PASS tools/tool:decimal add pred=[('add', {'a': -2.5, 'b': 7.75})] gold=[('add', {'a': -2.5, 'b': 7.75})]
+PASS tools/tool:two exact reads pred=[('read_file', {'path': 'README.md'}), ('read_file', {'path': 'LICENSE'})] gold=[('read_file', {'path': 'README.md'}), ('read_file', {'path': 'LICENSE'})]
+FAIL tools/tool:no-tool math pred=
+FAIL tools/tool:no-tool capital pred=
+PASS tools/tool:no-tool explain pred=
+
+Folder containing files and folders
+PASS tools/tool:read cfg pred=[('read_file', {'path': 'data/config.yaml'})] gold=[('read_file', {'path': 'data/config.yaml'})]
+PASS tools/tool:list home pred=[('list_dir', {'path': '/home'})] gold=[('list_dir', {'path': '/home'})]
+PASS tools/tool:search weather pred=[('search', {'query': "today's weather in Miami"})] gold=[('search', {'query': "today's weather in Miami"})]
+FAIL tools/tool:write trailing newline pred=[('write_file', {'path': 'notes.txt', 'content': 'hello\\n'})] gold=[('write_file', {'path': 'notes.txt', 'content': 'hello\n'})]
+PASS tools/tool:negative add pred=[('add', {'a': -19, 'b': -23})] gold=[('add', {'a': -19, 'b': -23})]
+PASS tools/tool:read readme pred=[('read_file', {'path': 'README.md'})] gold=[('read_file', {'path': 'README.md'})]
+PASS tools/tool:list current pred=[('list_dir', {'path': '.'})] gold=[('list_dir', {'path': '.'})]
+model: MiniCPM-V-4.7-35B-A3B-AWQ
+url:   http://127.0.0.1:18111/v1
+policy: custom (3ab54a4454ea)
+source: user-custom|thinking=on:user
+code execution: host-guarded
+
+Preflight
+  model: MiniCPM-V-4.7-35B-A3B-AWQ
+  served context: 65,536 tokens
+  source: /v1/models data[id=MiniCPM-V-4.7-35B-A3B-AWQ].max_model_len
+  output reserve: 32,768 tokens
+  safety margin: 1,311 tokens
+  safe input budget: 31,457 tokens
+  ETA: 7-24 minutes (high confidence)
+
+category        score     n  trunc  loops  high   low   n/a  miss      pp      tg     tps
+-----------------------------------------------------------------------------------------
+knowledge       40.0    20      0      0    11     9     0     0     n/a     n/a   121.7
+math           100.0    20      0      0    20     0     0     0     n/a     n/a   186.4
+truth           20.0    20      0      0     5    15     0     0     n/a     n/a    90.9
+instruct        70.0    20      0      1     0     0    20     0     n/a     n/a   187.6
+code            80.0    20      0      1     0     0    20     0     n/a     n/a     n/a
+tools           85.0    20      0      0     0     0    20     0     n/a     n/a     n/a
+-----------------------------------------------------------------------------------------
+overall[custom]       65.8  [loop-failures:instruct, loop-failures:code, low-confidence-parses:knowledge, low-confidence-parses:truth]
+speed: 56177 ctok / 300.4s  suite_tps 187.0  mean 146.7
+
+tokens           rtok     atok  empty  think
+--------------------------------------------
+knowledge        8974       53      9      0
+math             7152     2374      0      0
+truth            2340       35     15      0
+instruct        29951     5298      0      0
+code              n/a      n/a      0      0
+tools             n/a      n/a      2      0
+tokens: rtok=48417 atok=7760  (API split; n/a if engine omitted reasoning_tokens)
+continuation: remaining=0 failed=41 merge with --retry remaining|failed|incomplete on the same --log/--out
+
+wrote $CAMPAIGN/results/sixcat_cardsampling_on/sixcat.json
